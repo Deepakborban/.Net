@@ -1,0 +1,31 @@
+<!--
+Author : Shasikanth R
+Email  : shashiknathcr@gmail.com
+Mobile : +91-8971472005
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example5 | Finding Descendant Elements Within the Currently Selected Wrapper Set</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <p>Hi, we are now learning about <em>jQuery</em>. jQuery is a <em>client</em> side scripting language
+        which helps UI developer to develop Web2.0 component without using flash.</p>
+        
+        <p>Use the <em>.find()</em> method to create a new wrapper set of elements based on the context
+        of the current set and their descendants. For example, say that you have a web page
+        that contains several paragraphs..</p>
+        
+        <p>Encapsulated inside of these paragraphs are words that are <em>empharized</em>. If you'd like to
+        select only certain elements contained within container elements, you could do something else to
+        fetch the data...</p>
+        
+        <script type="text/JavaScript">
+                alert('The three paragraphs in all contain ' + jQuery('p').find('em').length +  ' italic words');
+        </script>
+    </body>
+</html>

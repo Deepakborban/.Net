@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style> 
+            div
+            {
+                width:100px;
+                height:100px;
+                background:yellow;
+                /* ye transition add karne se softly jaega  */
+                transition:width 2s;
+                -webkit-transition:width 2s; /* Safari */
+            }
+
+            div:hover
+            {
+                width:300px;
+            }
+            #animate
+            {
+                width:100px;
+                height:100px;
+                background:red;
+                transition:width 2s, height 2s;
+                -webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari */
+            }
+
+            #animate:hover
+            {
+                width:200px;
+                height:200px;
+                /* this is to rotate 360 deg */
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg); /* Safari */
+            }
+
+        </style>
+</head>
+<!-- we are having a trainsition here so when i move my mouse pointer to it what should i have to do 
+    it looks very complex when you see but isko likhna bohot aasan hai-->
+<body>
+        <div> This is the second article.  These articles could be blog posts, etc.  </div>
+        <div id="animate"> This is the second article.  These articles could be blog posts, etc.  </div>
+    </body>
+</html>

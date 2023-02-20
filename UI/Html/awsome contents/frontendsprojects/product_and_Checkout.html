@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            background: #19152dde;
+            overflow: hidden;
+        }
+
+        /* center everything vertically  */
+        .container {
+            width: 80vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* css for creating two column layout  */
+        .subcontainer {
+            display: grid;
+            grid-template-columns: 50% 40%;
+        }
+
+        /* overlap left side div from left side using transform and z-index  */
+        .left {
+            transform: translateX(110px);
+            z-index: 1;
+        }
+
+        /* overlap right side div from right side */
+        .right {
+            background: #3c3bcb;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            transform: translateX(50px);
+        }
+
+        /* layout end  */
+        /* css for adding bg image on product container div */
+        .product-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+            background-image: url("images/bg.png");
+            box-shadow: 43px 26px 145px -2px rgba(0, 0, 0, 0.51);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 550px;
+        }
+
+        .checkout-container {
+            margin: auto;
+            padding: 55px 35px;
+            border-top-right-radius: 20px;
+            height: 100%;
+            border-bottom-right-radius: 20px;
+        }
+
+        .detail {
+            position: relative;
+            text-align: center;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .detail .brand {
+            margin-bottom: 0rem;
+            padding-top: 2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #6b6ad4;
+            font-family: "Roboto", sans-serif;
+            letter-spacing: 0.1rem;
+        }
+
+        .detail .watchName {
+            margin: 1rem;
+            letter-spacing: 0.1rem;
+            font-weight: bold;
+        }
+
+        .imgSlide {
+            display: block;
+            width: 350px;
+            margin: auto;
+        }
+
+        img {
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        /* css for switch product image  */
+        .dots {
+            display: flex;
+            justify-content: center;
+            bottom: -3rem;
+            position: relative;
+        }
+
+        /* css for switch image (dot pagination) */
+        .pagination {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            border: 1px solid #3c3bcb;
+            width: 10px;
+            padding: 6px;
+            transition: 0.6s ease;
+            border-radius: 50%;
+            user-select: none;
+            transition: background-color 0.6s ease;
+            height: 10px;
+            margin-left: 1rem;
+        }
+
+        .pagination:hover,
+        .active {
+            background-color: #3c3bcb;
+        }
+
+        .checkout-container p {
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: "DM Sans", sans-serif;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .field {
+            margin-bottom: 1.5rem;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgb(147, 144, 144);
+            outline: none;
+            background: transparent;
+            color: #fff;
+        }
+
+        input[type="text"]::placeholder {
+            color: #fff;
+        }
+
+        input[type="text"]:focus {
+            border: 1px solid #8686f6;
+        }
+
+        .field.last_field {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .field.last_field .item {
+            width: 48%;
+        }
+
+        /* css submit button  */
+        .btn {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            overflow: hidden;
+            transition: 0.2s;
+            background-color: #fff;
+            margin-top: 0.5rem;
+            font-family: "Roboto", sans-serif;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .btn:hover {
+            color: #fff;
+            background: #7852e2;
+        }
+
+        @media only screen and (max-width: 725px) {
+            body {
+                overflow: auto;
+            }
+
+            .container {
+                width: 100vw;
+                position: absolute;
+                transform: translate(0, 0);
+                top: 0;
+                left: 0;
+            }
+
+            .subcontainer {
+                display: block;
+            }
+
+            .left {
+                transform: none;
+            }
+
+            .right {
+                background: #3c3bcb;
+                margin-top: 0rem;
+                margin-bottom: 0rem;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="subcontainer">
+            <div class="left">
+                <!-- product container div start  -->
+                <div class="product-container">
+                    <div class="detail">
+                        <p class="brand">Redux </p>
+                        <h2 class="watchName">Analog Men's Watch</h2>
+                    </div>
+                    <div class="imgSlide">
+                        <img src="images/1 (1).png" style="width: 100%;" />
+                    </div>
+
+                    <div class="imgSlide">
+                        <img src="images/2.png" style="width: 100%;" />
+                    </div>
+
+                    <div class="imgSlide">
+                        <img src="images/3.png" style="width: 100%;" />
+                    </div>
+                    <!-- dot pagination  -->
+                    <div class="dots">
+                        <a class="pagination" onclick="currentSlide(1)"></a>
+                        <a class="pagination" onclick="currentSlide(2)"></a>
+                        <a class="pagination" onclick="currentSlide(3)"></a>
+                    </div>
+                    <!-- dot pagination  -->
+                </div>
+                <!-- product container div end  -->
+            </div>
+
+            <div class="right">
+                <div class="checkout-container">
+                    <p>Checkout</p>
+                    <div class="field">
+                        <input type="text" placeholder="Card Name">
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Card Number">
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Cardholder Name">
+                    </div>
+                    <div class="field last_field">
+                        <div class="item">
+                            <input type="text" placeholder="Expiry Date">
+                        </div>
+                        <div class="item">
+                            <input type="text" placeholder="CVV">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Complete Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("imgSlide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+        // function showSlides() {
+        //     console.log(slideIndex); // for explanation purpose
+
+        //     var i;
+        //     /* targeting all element by class name pagination  */
+        //     var dots = document.getElementsByClassName("pagination");
+
+        //     /* removing active class from all dots pagination  */
+        //     for (i = 0; i < dots.length; i++) {
+        //         dots[i].classList.remove("active");
+        //     }
+
+        //     /* adding active class to respective dots pagination  */
+        //     dots[slideIndex - 1].classList.add("active");
+        // }
+    </script>
+</body>
+
+</html>

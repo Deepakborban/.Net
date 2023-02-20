@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Custom Error Message</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" name="txtName" required="required" 
+            placeholder="Enter your name" 
+            oninvalid="setCustomValidity('Please enter name')"
+            />
+        <input type="submit" value="Register" />
+    </form>
+</body>
+</html>
+<!-- if we not write oninvalid default error we will get please fill out this field 
+meaning html5 is not only giving me all this magical things but it is allowing me to customize even those messages thats a power of html5-->

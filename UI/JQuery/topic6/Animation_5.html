@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="css/animation.css" rel="stylesheet"/>
+        <script type="text/javascript" src="js/jquery.1.3.1.js"></script>        
+        <style type="text/css">
+            body {
+                margin: 20px;
+            }
+            .box, #single input {
+                margin-left: 0;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var speed = 100;
+    
+                $('#animate').click(function () {
+                    $('.box')
+                    .filter(':not(:animated)') // comment out this line to see the effect of multiple clicks
+                    .animate({ marginLeft: -10 }, speed, function () {
+                        $('#debug').append('<p>Starting animation.</p>');
+                    })
+                    .animate({ marginLeft: 10 }, speed)
+                    .animate({ marginLeft: -10}, speed)
+                    .animate({ marginLeft: 10 }, speed)
+                    .animate({ marginLeft: -10}, speed)
+                    .animate({ marginLeft: 10 }, speed)
+                    .animate({ marginLeft: 0}, speed, function () {
+                        $('#debug').append('<p>Finished animation.</p>');
+                    }); // end of our long chain
+                });
+            });
+        </script>
+    </head>
+    <body id="single">
+        <h1>Determining whether elements are currently being animated</h1>
+        <input type="button" id="animate" value="animate" />
+        <div class="box">
+            <p>This is Shasikanth. I like jQuery and animating using jQuery...</p>
+        </div>
+        <div id="debug"></div>
+    </body>
+</html>

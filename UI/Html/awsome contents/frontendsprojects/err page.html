@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  Poppins font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .home{
+            display: block;
+            width: 100%;
+            margin: auto;
+            align-items: center;
+            min-height: 100vh;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* Basic styling  */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* CSS to divide screen equally using grid and center    */
+        .container {
+            width: 80%;
+            display: grid;
+            margin: auto;
+            align-items: center;
+            min-height: 100vh;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* CSS For error text  */
+        .error{
+            width: 80%;
+        }
+
+        h1{
+            font-size: 60px;
+            font-weight: 600;
+            color: #2d2b2b;
+            margin-top: 2rem;
+        }
+
+        p{
+            letter-spacing: 2px;
+            font-size: 25px;
+            font-family: "eurostile", sans-serif;
+            margin-top: 1rem;
+            line-height: 2rem;
+        }
+
+        /* CSS For button transition  */
+        .cta{
+            font-weight: 500;
+            margin-top: 2rem;
+        }
+
+        .cta-back{
+            background-color: #ff4f5b;
+            color: #fff;
+            padding: 1rem 3em;
+            border: none;
+            outline: none;
+            position: relative;
+            cursor: pointer;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        .cta-back:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            background-color: #ff4f5b;
+            transition: transform 300ms ease-in-out;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .cta-back:hover {
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        .cta-back:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* CSS for image animation  */
+        img {
+            height: 60vh;
+            animation: MoveUpDown 2s ease-in-out infinite alternate-reverse both;
+        }
+
+        @keyframes MoveUpDown {
+            0% {
+                transform: translateY(10px);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* CSS For responsiveness  */
+        @media (max-width: 998px) {
+            .container {
+                display: block;
+                width: 100%;
+            }
+
+            .error {                
+                width: 100%;
+                margin: 18rem 9rem auto;
+                text-align: center;
+            }
+
+            img {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="home">
+            <div class="error">
+                <h1>Uh Ohh !</h1>
+                <p>We can find the page that you're looking for :( </p>
+                <div class="cta">
+                    <button href="#" class="cta-back">
+                        Go Back
+                    </button>
+                </div>
+            </div>
+            <img src="images/404.png" alt="home image" class="hero-img" />
+        </section>
+    
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

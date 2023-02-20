@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <style>
+        .err{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- if user havent put login id or password so in the label i should get the message saying
+    userid cannot be blank
+    password cannot be blank -->
+
+
+    <div class="main">
+        <label for="" class="lbl">Enter login ID :</label>
+        <input type="email" name="" id="txtLoginId" oninput="validateLoginId()"><br>
+        <!-- <label for="" class="err" id="errLoginId">Login Id cannot be blank..</label><br>        I dont want to print err messab=ge at the begnning so i keep it blank -->
+        <label for="" class="err" id="errLoginId"></label><br> 
+        <label for="" class="lbl">Enter Password :</label>
+        <input type="password" name="" id="txtPassword"><br>
+        <!-- <label for="" class="err" id="errPassword">Login Id cannot be blank..</label><br> -->
+        <label for="" class="err" id="errPassword"></label><br> 
+        <button onclick="validate()">Login</button>
+        <button>Clear</button>
+    </div>
+
+
+    <script>
+        var errLogin = "Login Id cannot be blank...";
+        var errPassword  = "Password cannot be blank...";
+        //so when user click on login i want to check weather it is empty or not and based on that i should get a message 
+        function validate(){
+            let userName = document.getElementById("txtLoginId").value;
+            let userPwd = document.getElementById("txtPassword").value;
+            if(userName == ""){
+                document.getElementById("errLoginId").innerText = errLogin;//but when user starts typing in the textbox this message should erase
+                //so based on the keypress of this particular textbox i should make it disappear or appear 
+                //so i need to write a event handler for it ,so we have something called oninput
+            }else{
+                document.getElementById("errLoginId").innerText  =  ""; 
+            }
+        }
+        function validateLoginId(){
+            //how will i check weather this method is called on keypress or not
+            //using console
+            //console.log("Hello");
+
+            //now how will i know weather ihave character entered in this text box or not 
+            let userName = document.getElementById("txtLoginId").value;//this will give me the data     
+            // console.log(userName);
+
+            //so now i have to check weather i have any characters in it or not
+            if(userName.length > 0){
+                document.getElementById("errLoginId").innerText = "";
+            }else{
+                document.getElementById("errLoginId").innerText  = errLogin; 
+            }
+        }
+    </script>
+</body>
+
+</html>

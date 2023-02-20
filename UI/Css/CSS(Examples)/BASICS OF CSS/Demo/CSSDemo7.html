@@ -1,0 +1,132 @@
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid tomato;
+  
+          
+        }
+
+        .d1 {
+
+            background-color: orange;
+            z-index: 100;
+        }
+
+        .d2 {
+            top: 50px;
+            left: 50px;
+            background-color: pink;
+            z-index: 99;
+        }
+
+
+        .d3 {
+            top: 100px;
+            left: 100px;
+            background-color: gray;
+        }
+
+       
+        .main {
+            width: 500px;
+            height: 250px;
+            top: 200px;
+            left: 400px;
+            position:absolute;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class=main>
+        <div class="d1">First</div>
+        <div class="d2">Second</div>
+        <div class="d3">Third</div>
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+
+
+<!-- in position absolute it will go with the parent and then it will keep alining them in our case parent is main -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid tomato;
+             
+          
+        }
+
+        .d1 {
+
+            background-color: orange;
+            z-index: 100;
+            position:absolute;
+        }
+
+        .d2 {
+          /* but as we are explicitly mentioning left 100px so it will move 100px left from the screen or body not from the div  */
+            left: 100px;
+            background-color: pink;
+            z-index: 99;
+            position:absolute;
+        }
+
+
+        .d3 {
+           
+            left: 200px;
+            background-color: gray;
+            position:absolute;
+        }
+
+       
+        .main {
+            width: 500px;
+            height: 250px;
+            top: 200px;
+            left: 400px;
+            
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class=main>
+        <div class="d1">First</div>
+        <div class="d2">Second</div>
+        <div class="d3">Third</div>
+    </div>
+</body>
+
+</html>
+

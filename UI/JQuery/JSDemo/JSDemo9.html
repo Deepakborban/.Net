@@ -1,0 +1,131 @@
+<html>
+
+<head></head>
+
+<body>
+
+    <p> my functions job is to read the data from the screen </p>
+    <p>imagine that user has already entered the number and the number is 10 and 20</p>
+    <p> var no1 = 10;
+        <br> <br>var no2 = 20;
+        <br> <br> now you have to understand 1 thing very carefully how the functions will work
+        <br> <br> whenever you write a particular function we will have 3 parts in it
+        <br> <br> 1.return type
+        <br> <br> 2nd function name
+        <br> <br> 3rd parameter
+
+
+        <br> <br> its not compultion to have parameter
+        <br> <br> if my function wont return any thing so ill say void ----------void fun(){}
+        <br> <br> and to call this function i write-------------fun1();
+        <br> <br> any thing to the caller it means i am calling this function and this function is not writtening
+        anything
+        <br> <br> its like you are giving 10 rs to a children and saying go eat something but yaha aap 10rs bhi nahi de
+        rahe
+        ho
+        <br> <br> you are just saying to the kid ki go have choclate
+        <br> <br> so what that particuar guy will do he will buy the choclate or eat some thing or dont do anything its
+        his
+        job
+        <br> <br> nor this guy will comeback and tell to you anything nor you are bothered about that guy
+        <br> <br> so nither you are passing any parameter to this function nor this function is bothered to returning to
+        you
+        <br> <br> you are just calling the function and he is performing his job
+        <br> <br> now suppose there is diwali and you are giving 10 rs to that child------------ fun2(10);
+        <br> <br> and you will say go have choclate
+        <br> <br> now when you are giving 10s to kid so needs to have pocket to take money and keep it
+        <br><br> what he does he keep this in pocket no1 -----------void fun2(int no1){}
+        <br><br> no1 is the pocket where the 10 will be pushed now by saying void you are not expecting to that child ki
+        come back to you
+        <br> <br> and say what he had done with that 10rs you just give the value and you are not bothered and this
+        child
+        will do what ever he wantsto do with that money
+
+
+        <br> <br> now we have fun3----------int fun3(int no1){ return no1+20; }
+        <br> <br> what my fun3 does is it will take the aurgument ---it is taking number 1 and it is performing some
+        operation with no1
+        <br> <br> and he is returning some value------- may be you call some kid and give 10 rs to him and say go have
+        fun
+        <br> <br> so he already has 20rs with him so he take whatever the money you are giving he add 20rs to it
+        <br> <br> he is comming back to you and giving that to you
+        <br> <br> now when he is comming back and giving that to you so obviously you should have the value(pocket) to
+        store
+        that return value
+        <br> <br> ------------int funValue = fun3(10);
+        <br> <br> so here my function is called with parameter and it is returning something so i should have a
+        placeholder
+        store that value
+      
+    </p>
+    <img src="../js_images/12.PNG" alt="">
+    <p>now pls understand one very important thing </p>
+    <p>any program you write it would be it would be most simplest ,silliest program like adding of two numbers or may
+        be to print hellow followsed by the name of the user </p>
+    <p>any program you write will have 3 parts in it </p>
+    <p>1 is Input</p>
+    <p>2nd will be the Process</p>
+    <p>3rd will be the Output</p>
+    <p><b>IPO</b>--input process output</p>
+    <p>input will come from the user </p>
+    <p>output is to the user </p>
+    <p>process is for us </p>
+    <p>for example- I am asking a user to enter 2 numbers so that becomes a input so he will put 1st number and 2nd
+        number</p>
+    <p>when user clicks on + button we need to do sum thats the process </p>
+    <p>after the process the result what i am having i have to give it back to the user that becomes the output </p>
+    <p>input and output we already have seen using html and css </p>
+    <p>now today what we dealing is process related code so java script </p>
+    <p>so in the java script what we do we read the data we will process that particular data and gives the output </p>
+    <p>but in some cases we need to add an extra layer here we may have to go with the storage -------------IPOS</p>
+    <p>meaning i am trying to store the data i have the processed data, the input data or the output data i ll take that
+        processed data and store that data </p>
+    <p>It can be using file handeling , it can be using Database</p>
+    <p>once you store that particular data will pe permanently there</p>
+    <p>it will be persisted and it will use the persisted data may be in later stages </p>
+    <img src="../js_images/13.PNG" alt="">
+    <p>Nowcomming back here to the question why can't we pass this particular value </p>
+    <img src="../js_images/14.PNG" alt="">
+    <p>if i return this calculated value </p>
+    <img src="../js_images/15.PNG" alt="">
+    <p>who is the caller who is calling this calculate method </p>
+    <img src="../js_images/12.PNG" alt="">
+    <p>here who is calling my fun1()---------main is calling </p>
+
+    <p>similarly if i write return here so who is calling calculate method </p>
+    <img src="../js_images/15.PNG" alt="">
+    <p>this button is calling na ---onclick() is a event handler is'nt it so my this particular event will get calculate
+        return here so where will you write the code to print the sum on the screen as output </p>
+    <img src="../js_images/16.PNG" alt="">
+
+    <p>one more question</p>
+    <p>why are you calling one more funtion can't we directly write result=no1 + no2 here</p>
+    <img src="../js_images/17.PNG" alt="">
+    <p>like i know this is a + symbol so instead of writing one more function passing parameter to it then return the
+        result so i can directly write na result=no1 + no2 </p>
+    <p><b>we ca do this but it is not recommended because the job of my function is to controll the input and output</b>
+    </p>
+    <img src="../js_images/18.PNG" alt="">
+    <p>just like when you go to hotel and in the hotel you have the server guy he will come and say mam sir please tell
+        me what you want to have and you pic from the list and say i want to eat this then he go to that particular
+        place and place order then chef will process the food and give to the server guy so he take the food and come
+        and serve you </p>
+    <p>will the server guy go to kitchen and will he prepare -------no that will never happen na </p>
+
+    <p><b><b>this is Called SRP------Single Responsible Principle</b></b></p>
+    <img src="../js_images/19.PNG" alt="">
+    <p>so what is the job of this calculator ---it use to take the operator based on operator it will not sit and
+        calculate it is not the job of this guy he is like a supplier </p>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

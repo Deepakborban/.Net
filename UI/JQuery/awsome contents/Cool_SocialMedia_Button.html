@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #010101;
+
+    }
+    .follow-btn{
+        position:relative;
+        cursor: pointer;
+        overflow: hidden;
+
+    }
+    .btn-text{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+        background-color: #398ab9;
+        color: #fff;
+        white-space: nowrap;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+        transition:transform 0.5s ease-in-out;
+    }
+    .links-container{
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:20px;
+
+    }
+    .links-container a{
+        text-decoration: none;
+        color: #010101;
+        font-size: 24px;
+        transition: all 0.3s;
+
+    }
+    .links-container a:hover{
+        color: #398ab9;
+        transform: scale(2.3);
+    }
+    .links-container a:not(:last-child){
+        margin-right: 20px;
+    }
+    .follow-btn:hover .btn-text{
+        transform: translateY(-100%);
+    }
+</style>
+</head>
+
+<body>
+    <div class="follow-btn">
+        <p class="btn-text">Follow Me</p>
+        <div class="links-container">
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+           
+
+        </div>
+    </div>
+
+</body>
+
+</html>

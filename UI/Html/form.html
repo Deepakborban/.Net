@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Register Me</h3>
+    <!--------------IMP------------------->
+<!-- why we use name and id
+whenever you create a particular form
+so What are the other attributes of form  
+
+Attribute----------------Description
+accept-charset-----------Specifies the character encodings used for form submission
+action-------------------Specifies where to send the form-data when a form is submitted
+autocomplete-------------Specifies whether a form should have autocomplete on or off
+enctype	-----------------Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
+method	-----------------Specifies the HTTP method to use when sending form-data
+name	-----------------Specifies the name of the form
+novalidate	-------------Specifies that the form should not be validated when submitted
+rel	---------------------Specifies the relationship between a linked resource and the current document
+target	-----------------Specifies where to display the response that is received after submitting the form
+        
+    The Target Attribute
+          The target attribute specifies where to display the response that is received after submitting the form.
+
+          The target attribute can have one of the following values:
+
+          Value----------Description
+          _blank--------The response is displayed in a new window or tab
+          _self	--------The response is displayed in the current window
+          _parent-------The response is displayed in the parent frame
+          _top	--------The response is displayed in the full body of the window
+          framename	----The response is displayed in a named iframe
+          The default value is _self which means that the response will open in the current window.
+
+
+When you click on this submit button what happens 
+-------- fill form and click on the url area in browser where we write website name 
+           and see what happen   ITS TRYING TO PUSH SOME DATA     -->
+
+
+
+<!-- name me jo likha hai wo as key jaeha and jo user enter karega wo as value jaega
+        now when you submit this the information will be posted to the server 
+         and server will send the response 
+        now to which resource i need to send in the server that should be mention in the  action
+        so action says to which page it has to go  -->
+<!--suppose we create a file name success.html here  (Please keep this in mind we never go for the static page)-->
+  <!-- action move us to the page written inside it and pass the keys and values user have entered -->
+
+  <!-- BUT there is a problem you can see that the password is exposed here along with all our detail
+  http://127.0.0.1:5501/HTML/success.html?cpassword=deepak8959&gender=on&hobbies=on&hobbies=on&states=Madhya+Pradesh&file=duckett.pdf 
+so if you have and sensitive information which you dont want to get exposed like password
+so usually we embeed all this data inside the request object (how to fetch this data we will see in asp.net)
+to do that inside method attribute we write******** post******through this our data not go with the url rater it go with the request object-->
+      <form action="success.html" method="post">
+        <label for="name">Enter your name :</label>
+        <!--ill just type here name="name" -->
+        <input type="text" name="" id="name"><br>
+
+      
+        <label for="pwd">Enter password :</label>
+        <!--ill just type here name="password" -->
+        <input type="password" name="" id="pwd"><br>
+
+        <label for="cpwd">Confirm password :</label>
+          <!--ill just type here name="cpassword" -->
+        <input type="password" name="cpassword" id="cpwd"><br> 
+
+        <label for="gender">Gender :</label>
+        Male :<input type="radio" name="gender" id="">
+        Female : <input type="radio" name="gender" id=""> <br>
+
+        <label for="hobbies">Hobbies :</label>
+        <!--ill just type here name="hoobies" -->
+        <input type="checkbox" name="hobbies" id="">Music
+        <!--ill just type here name="hoobies" -->
+        <input type="checkbox" name="hobbies" id="">Coocking
+        <!--ill just type here name="hoobies" -->
+        <input type="checkbox" name="hobbies" id="">Playing Games
+        <!--ill just type here name="hoobies" -->
+        <input type="checkbox" name="hobbies" id="">Travelling  <br>
+
+        <label for="">Select States</label>
+        <!-- select me name dedenge states -->
+        <select name="states">
+            <option>Madhya Pradesh</option>
+            <option>Bihar</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+        </select><br>
+
+        <label for="">Upload Resume</label>
+        <!--ill just type here name="file" -->
+        <input type="file" name="file" id="" accept=".pdf ,.docs"><br>
+
+        <input type="submit" value="Click Here to Register">
+
+        <input type="reset" value="Click Here to Reset">
+    </form>
+    
+
+
+<!-- now click on the url and observe how it looks
+its look like this-----
+http://127.0.0.1:5501/Example9.1.html?cpassword=deepak8959&gender=on&hobbies=on&hobbies=on&states=Madhya+Pradesh&file=duckett.pdf  
+see whole details will be revealed here
+from where did i get all this information 
+what is this name 
+what is this cpassword
+what is this gender .......
+in the url
+-------ye sab wo hai jo humne name="  " ke andar likha hai   
+///////////////////name me jo likha hai wo as key jaeha and jo user enter karega wo as value jaega////////////////////////////////////////////////////
+    so this particular data is pushed to this particular page called Example9.1.html
+  in server side  meaning we are gone to push this information to your dynamic page whatever we are creating here
+from UI we are pushing this information to web service or to bussiness layer -->
+
+<!-- now in our example it is taking it to Example9.1 page but in reality it is not be a particular page
+rather in java world its been a servlet
+       in .net world it will be push to your controller and the controller knows what exactly it has to do with this data
+    so it takes this particular data manupulate it or store it what ever it want to
+then finally it send the response back-->
+
+
+<!--*********** SO name is used to access this client side data in the server side *********** 
+  so name is basically use to gather/ push this particular information from the client side to server side
+when ever we are calling the server side code you want to push this particular data to the server
+this is a key from which i get the value (server side)-->
+
+<!-- <input type="text" name="" id="name"><br> -->
+
+
+<!--***********ID are basically use to get or manupulate the data of this particular element 
+                          at the client side(meaning browser side)
+                        and this is also a key from which i get the value(client side)-->
+
+<!-- In the javascript if i want to get this particular data so you can get it from both the way
+you can get it from the name or from the ID thats the different story  
+
+             but id is always ideal -->
+
+
+
+<!-- so the comparison of this can be done at the client side or at the server side (the choice is yours) 
+      but when you talk about the security i dont want to write any sort of javascript and scrope my server side coding
+      so in this case we write all this particular information at server side-->
+
+
+
+    <h1 style="color: green;">the comparison of pass and confirm pass can be done at client side or at the server side the choice will be your
+    you can do this at client side using java script </h1>
+
+<!-- right now to make this looks good use table  -->
+
+<h1>This is how URL of this form goes on submit</h1>
+<p style="color: red;">http://127.0.0.1:5501/form.html?name=Deepak+Borban&password=deepak8959&cpassword=deepak8959&gender=on&hobbies=on&hobbies=on&hobbies=on&state=Madhya+Pradesh&address=C%2FL-220</p>
+<h3>but this is not secure as this will reveal our info</h3>
+<h4>this data is reveal from here name="name" name="password"............</h4>
+<p>so this data is comming to where?    this particular data is pushed to this particular page called form.html in the server side  
+    In the server all this data is pushed tó his page meaning  we will gone to puch this information to the dynamic page
+    What ever we are creating here  we are pushing that info to webservice or to bussiness layer
+
+
+    So this particular data is important now in our case ittaking us to this particular page but 
+    in reality it will not be a particular page rather this will be a servelet in java world and in .net world it will be your controller
+
+    so this information will go to the controller and the controller and the controller know what it has to do with this data 
+    so it take data and do what ever it wants like storing or manupulating and send the respose back 
+</p> 
+<h1 style="color: rgb(75, 66, 14);">SO name is used to access the client side data in server side    Or   to push the info from the client side to server side </h1>
+
+
+<h1>What about Id then?</h1>
+<h2 >Id are basically use to get or manupulate the data of this particular element at the client side meaning browser side</h2>
+
+<h1 style="color: rgb(58, 23, 58);">name is used to play with this data at the server side  THIS IS A KEY from which i'll get the value<br>
+Id is also a key form which i'll get the value but at client side <br>
+and id should be unique or ideal</h1>
+
+
+
+
+ 
+
+
+
+
+
+
+<h1 style="color: red;"> so to over come this we write like this</h1>
+<h3>Register Me</h3>
+<!-- we use form tag to design a form -->
+<form>
+<!-- Best part of vs code is you dont need to type every thing
+just write----input:text----press enter it will create the whole thing for you input type text name and id-->
+
+<!--input tag is used to take input-->
+<!-- 
+Type	Description
+<input type="text">	Displays a single-line text input field
+<input type="radio">	Displays a radio button (for selecting one of many choices)
+<input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+<input type="submit">	Displays a submit button (for submitting the form)
+<input type="button">	Displays a clickable button 
+<input type="password">  when we use input type as password so our beowser automatically detect that it is a password so it hide the detail we have entered 
+                     or microsoft edge me kholo ge to ek eye button bhi show hoga to check what have you entered,  crome me nai hora -->
+
+
+<!--Lable tag
+
+The <label> tag defines a label for many form elements.
+
+The <label> element is useful for screen-reader users, 
+because the screen-reader will read out loud the label when the user focus on the input element.
+
+The <label> element also help users who have difficulty clicking on very small regions 
+(such as radio buttons or checkboxes) 
+- because when the user clicks the text within the <label> element, 
+    it toggles the radio button/checkbox.
+
+The for attribute of the <label> tag should be equal to the 
+id attribute of the <input> element to bind them together.-->
+
+    <label for="name">Enter your name :</label>
+    <input type="text" name="" id="name"><br>
+
+<!-- What is this name and id and for
+        now when ever you use a smaller devices like mobile you have build an applicatin for mobile
+        and your user filling this form (now you have to imagine ok)
+        now users thumb is quite big so he want to click on the name section to enter the name 
+        so right now we dont have much space here so if we not correctly for and id to 
+        jese is code me humne name  me pwd likh diya to thumb agar enter your name pe touch hoga 
+        to cursor password section me chalejaega and we dont want this  
+
+    label for="pwd">Enter your name :</label>
+    <input type="text" name="" id="name"><br>
+    
+    label for="pwd">Enter password :</label>
+    <input type="password" name="" id="pwd"><br>
+
+    <label for="cpwd">Confirm password :</label>
+    <input type="password" name="" id="cpwd"><br> 
+-->
+
+    <label for="pwd">Enter password :</label>
+    <input type="password" name="" id="pwd"><br>
+
+    <label for="cpwd">Confirm password :</label>
+    <input type="password" name="" id="cpwd"><br> 
+
+    <label for="gender">Gender :</label>
+    <!--with this code both male and female gets selected we dont want this 
+        Male :<input type="radio" name="" id="">
+        Female : <input type="radio" name="" id=""> 
+    -->
+    <!--we want this for gender na so give name="gender"-->
+
+    Male :<input type="radio" name="gender" id="">
+    Female : <input type="radio" name="gender" id=""> <br>
+
+    <!-- we can have more than one hobbies thats why we havent use name as hobbies  -->
+    <label for="hobbies">Hobbies :</label>
+    <input type="checkbox" name="" id="">Music
+    <input type="checkbox" name="" id="">Coocking
+    <input type="checkbox" name="" id="">Playing Games
+    <input type="checkbox" name="" id="">Travelling  <br>
+
+    <!-- how to get a drop down -->
+    <label for="">Select States</label> 
+    <select>
+        <option>Madhya Pradesh</option>
+        <option>Bihar</option>
+        <option>Gujarat</option>
+        <option>Haryana</option>
+    </select><br>
+
+
+    <!-- how to upload a resume
+    that you select a file and then submit 
+    for this we have input type file -->
+    <!--
+    <label for="">Upload Resume</label>
+    <input type="file" name="" id=""><br>
+     -->
+    <!-- now i dont want to allow the user to pic all these type of files 
+    it should allow user only pdfs or docs
+    for this we have an attribute of input----accept (we can gave single or multiple file extension to it)-->
+        <label for="">Upload Resume</label>
+        <input type="file" name="" id="" accept=".pdf ,.docs"><br>
+
+
+    <!-- Textarea tag
+    use ---------- if you want to get a large data you can always use the textarea 
+    rows---------------define number of rows 
+    cols -------------------define number of colons
+    maxlength --------------------restrict the character to be enter here we can only type 10 alphabets-->
+    Address  :<br>
+    <textarea name="address"  rows="5" cols="20" maxlength="10"></textarea><br>
+
+    
+    <!-- now we want a submit or a regiter button 
+    so use input type as submit  and 
+    what ever you want to show in button write it in value attribute 
+    like submit or register or anything else you want to show
+      -->
+    <input type="submit" value="Click Here to Register">
+
+    <!-- now we want to add a reset button
+    for this we have input type reset -->
+    <input type="reset" value="Click Here to Reset">
+
+    
+
+</form>
+<!-- right now to make this looks good use table  -->
+
+</body>
+</html>

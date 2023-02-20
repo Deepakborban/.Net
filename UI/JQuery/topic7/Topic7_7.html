@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Displaying remaining character count</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="css/basic.css" rel="stylesheet"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <style type="text/css" title="text/css">
+            form {
+		padding: 1em 0;
+		}
+        </style>
+        <script type="text/javascript">
+            // when the HTML DOM is ready
+            $(document).ready(function(){
+			$('.onlyNumbers').bind('keydown',function(event){
+			
+				// the keycode for the key pressed
+				var keyCode = event.which;
+				
+				// 48-57 Standard Keyboard Numbers
+				var isStandard = (keyCode > 47 && keyCode < 58);
+				
+				// 96-105 Extended Keyboard Numbers (aka Keypad)
+				var isExtended = (keyCode > 95 && keyCode < 106);
+
+				// 8 Backspace, 46 Forward Delete
+				// 37 Left Arrow, 38 Up Arrow, 39 Right Arrow, 40 Down Arrow
+				var validKeyCodes = ',8,37,38,39,40,46,';
+				var isOther = ( validKeyCodes.indexOf(',' + keyCode + ',') > -1 );
+				
+				if ( isStandard || isExtended || isOther ){
+					return true;
+				} else {
+					return false;
+				}
+				
+			}).bind('blur',function(){
+
+				// regular expression that matches everything that is not a number
+				var pattern = new RegExp('[^0-9]+', 'g');
+			
+				var $input = $(this);
+				var value = $input.val();
+
+				// clean the value using the regular expression
+				value = value.replace(pattern, '');
+				$input.val( value )
+			});
+		}); // close ready()
+        </script>
+    </head>
+    <body>
+
+        <div id="container">
+	<h1>Constraining text input to specific characters</h1>
+
+	<form action="">
+		<input type="text" class="onlyNumbers" />
+	</form>
+
+</div>
+    </body>
+</html>

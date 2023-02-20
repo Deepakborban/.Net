@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function fun1(){
+                var no1 = 10;
+                var no2 = 1000; //i am declaring this as 1000
+                if(no1 <= 10){
+                    var no2 = 100;//when i come down here so my java script will that i am saying var no2 = 100  
+                    //so it will think and it will not redeclare this variable rather it will think it is a same variable no2 and it put 100 to it 
+                    console.log(no2);
+                    no1++;
+                }
+                console.log(no2);//thats a reason the output will be 100 and 101
+            }
+            fun1();
+
+
+
+
+            function fun2(){
+                var num1 = 10;
+                let num2 = 1000; //now we have change this to let 
+                if(num1 <= 10){
+                    let num2 = 100;//
+                    console.log(num2);
+                    num1++;
+                }
+                console.log(num2);//now the output will be 100 and 1000
+            }
+            fun2();
+
+
+
+
+
+            
+            function fun3(){
+                var n1 = 10;
+                var n2 = 1000; //now we have change this to var
+                if(n1 <= 10){
+                    let n2 = 100;//here it is let
+                    console.log(n2);
+                    n1++;
+                }
+                console.log(n2);//then also the output will be 100 and 1000
+            }
+            fun2();
+        </script>
+    </body>
+</html>

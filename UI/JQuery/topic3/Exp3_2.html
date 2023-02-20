@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dividing elements using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <h2>Hockey Team</h2>
+        <hr/>
+        <h2>Eastern Conference</h2>
+        <ol id="east">
+            <li>Boston Bruins</li>
+            <li>Washington Capitals</li>
+            <li>New Jersey Devils</li>
+            <li>Pittsburgh Penguins</li>
+            <li>Philadelphia Flyers</li>
+            <li>Carolina Hurricanes</li>
+            <li>New York Rangers</li>
+            <li>Montreal Canadians</li>
+            <li>Florida Panthers</li>
+            <li>Buffalo Sabres</li>
+            <li>Ottawa Senators</li>
+            <li>Toronto Maple Leafs</li>
+            <li>Atlanta Thrashers</li>
+            <li>Tampa Bay Lightning</li>
+            <li>New York Islanders</li>
+        </ol>
+        <h2>Western Conference</h2>
+        <ol id="west">
+            <li>San Jose Sharks</li>
+            <li>Detroit Red Wings</li>
+            <li>Vancouver Canucks</li>
+            <li>Chicago Blackhawks</li>
+            <li>Calgary Flames</li>
+            <li>St. Louis Blues</li>
+            <li>Columbus Blue Jackets</li>
+            <li>Anaheim Ducks</li>
+            <li>Minnesota Wild</li>
+            <li>Nashville Predators</li>
+            <li>Edmonton Oilers</li>
+            <li>Dallas Stars</li>
+            <li>Phoenix Coyotes</li>
+            <li>Los Angeles Kings</li>
+            <li>Colorado Avalanche</li>
+        </ol>
+
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $("ol#east > li").eq(7).css("border-bottom", "1px solid #000000");//we have a ordered list which have id east
+                // > means its child which is equal to 7 add css for it
+                $("ol#west > li").eq(7).css("border-bottom", "1px solid #000000");
+            });                        
+            
+        </script>
+    </body>
+</html>

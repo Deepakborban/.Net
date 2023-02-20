@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script>
+        //clickCounter  is the function written in java script which is checking a condition
+        function clickCounter() {
+            //it is checking type of storage  is not undefined if this is not undefined meaning it is having some kind of content
+            //typeof (Storage) it says weather your browser supports this storage or not local storage or session storage 
+            //if the answer is yes then it wil go inside the if but if the answer is no means you are using very old browser may be like
+            //internet explorer 2 or 3 or 4 
+            if (typeof (Storage) !== "undefined") {
+                //if my browser supports that storage then i will check weather the value already exists or not
+                //localstorage is the object
+                //clickcount is the name of the key  
+                //object.key 
+                //so i am checking if the clickcount exist
+                if (localStorage.clickcount) {
+                    //if we have the clickcount so it will say localStorage.clickcount = what ever the number you are taking + 1 
+                    //it will take the previous and keep adding to it 
+                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                }
+                //but what if the value itself is not there meaning i don't have clickcount at all 
+                else {
+                    //so its a fresh call so i'll say  localStorage.clickcount = 1 meaning at first time it will store 1 in it  
+                    localStorage.clickcount = 1;
+                }
+                //now we have stored the data in it now what we have to do we need to fetch this value from the local storage and print it  
+                //for this we specify document.getElementById("result") result is the name of id and as this is a div so to put this content in the div 
+                //so if you want to do this dynamically we will use .innerHtml 
+                // localStorage.clickcount will give me the value of count
+                document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+            }
+            //in that case it will put message saying boss Sorry, your browser does not support web storage...
+            else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+        </script>
+</head>
+<body>
+    <!-- in html we have a heading  a horizontal line a button and a textbox and two static message  -->
+    <h3>Local Store</h3>
+        <hr/>
+        <!-- this button is imp for me because when user clicks on this something is happening 
+        so in this button i'll say onclick when use clicks on this particular button i am calling the clickcounter function -->
+        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+        <!-- and this div is very important for me because this is the place where i get the number printed -->
+        <div id="result"></div>
+        <p>Click the button to see the counter increase.</p>
+        <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+</body>
+</html>

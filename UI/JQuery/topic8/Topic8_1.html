@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Controls using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="css/basic.css" rel="stylesheet"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.validate.js"></script>
+        <script type="text/javascript" src="../js/jquery.maskedinput.js"></script>
+        <style type="text/css">
+            * {
+                font-family: Verdana;
+                font-size: 96%;
+            }
+            
+            label {
+                width: 10em;
+                float: left;
+            }
+            
+            label.error {
+                float: none;
+                color: red;
+                padding-left: .5em;
+                vertical-align: top;
+            }
+            
+            div {
+                clear: both;
+            }
+			
+			input, textarea {
+				width: 15em;
+			}
+            
+            .submit {
+                margin-left: 10em;
+            }
+        </style>
+        <script type="text/javascript">
+		jQuery(document).ready(function($){
+                $("#commentForm").validate();
+            });
+            jQuery(document).ready(function($){
+                $("#phone").mask("(999) 999-9999");
+            });
+	</script>
+    </head>
+    <body>
+        <h1>Register</h1>
+
+	<form id="commentForm" method="get" action="">
+            <fieldset>
+                <legend>
+                    A simple comment form with submit validation and default messages
+                </legend>
+                <div>
+                    <label for="cname">
+                        Name
+                    </label>
+                    <input id="cname" name="name" class="required" minlength="2" />
+                </div>
+                <div>
+                    <label for="cemail">
+                        E-Mail
+                    </label>
+                    <input id="cemail" name="email" class="required email" />
+                </div>
+                <div>
+                    <label for="curl">
+                        URL (optional)
+                    </label>
+                    <input id="curl" name="url" class="url" value="" />
+                </div>
+                <div>
+                    <label for="ccomment">
+                        Your comment
+                    </label>
+                    <textarea id="ccomment" name="comment" class="required"></textarea>
+                </div>
+                <div>
+                    <label for="phone">
+                        Phone
+                    </label>
+                    <input type="text" name="phone" id="phone" />
+                </div>
+                <div>
+                    <input class="submit" type="submit" value="Submit"/>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>

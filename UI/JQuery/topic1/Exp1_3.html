@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example3 | Fetching data from p tag</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+    </head>
+    <body>
+      <p style="visibility: hidden">Hi, How are you?</p>  <!-- here the visiblity is hidden you cannot see the data 
+    what is the other way to hide the data 
+1. is visiblity: hidden
+2. is display: none
+visiblity hidden will occupies the space but where as display none will not   -->
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                alert(jQuery('p').text());
+            })
+        </script>
+    </body>
+</html>

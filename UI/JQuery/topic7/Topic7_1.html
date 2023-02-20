@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Controls using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="css/basic.css" rel="stylesheet"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <style type="text/css" title="text/css">
+		form {
+			padding: 1em 0;
+		}
+		div {
+			float: left;
+			clear: both;
+			padding: 0 0 1em 0;
+		}
+		label, input {
+			float: left;
+			display: block; 
+			width: 6em;
+			line-height: 1.5em;
+		}
+		input#login {
+			width: auto;
+			margin: 0 0 0 6.5em;
+		}
+	</style>
+        <script type="text/javascript">
+		// when the HTML DOM is ready
+		$(document).ready(function(){
+			var $inputTxt = $('#username');
+			if( $inputTxt.val() == '' ) {//here i am checking if my input object value is null/blank
+				//then we are setting the focus to  username input by default
+				$inputTxt.focus();
+			}
+		});
+	</script>
+    </head>
+    <body>
+        <h1>Focusing a text input by default</h1>
+
+	<form action="">
+		<div>
+			<label for="username">Username</label>
+			<input name="username" id="username"  type="text"  />
+			<!-- we can use autofocus to achieve the same thing we dont need java script for it  -->
+			<!-- <input name="username" id="username" autofocus  type="text"  /> -->
+
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input name="password" id="password" type="password" />
+		</div>
+		<div>
+			<input name="login" id="login" type="submit" value="Login" />
+		</div>
+	</form>
+    </body>
+</html>

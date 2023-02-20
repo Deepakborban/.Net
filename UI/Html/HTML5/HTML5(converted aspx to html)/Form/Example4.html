@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title></title>
+</head>
+
+<body>
+    <h2>Range & Number Example</h2>
+    <hr />
+    <br />
+    <br />
+    <b>Scroll to change the value</b>
+    <form oninput="drange.value=arange.value">
+        <input type="range" id="arange" value="50">
+        <output name="drange" for="arange">50</output>
+    </form>
+    <br />
+    <br />
+    <!-- this controll is basically used where we want to add no of items in cart
+         so like amazon will give error if you try to ad more than 4 phones in the cart -->
+    <b>Click on the number to change</b>
+    <form oninput="dnumber.value=bnumber.value">
+        <input type="number" id="bnumber" value="0" min="0" max="100">
+        <output name="dnumber" for="bnumber">0</output>
+    </form>
+    <br />
+    <br />
+    <b>Calculate</b>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+        <!-- here we increase this input value or -->
+        <input type="range" id="a" value="50">100
+        <!-- this input value  -->
+        +<input type="number" id="b" value="50">
+        <!-- we will get the updated sum value here  -->
+        =<output name="x" for="a b">100</output>
+        <!-- how we are doing this , so we are saying form on input
+             we have taken name of output as x so x.value   x's value   
+              is equal to i'll take the value of 1st input  a and the value of b 
+            so i'll as a.value + b.value 
+        Please remember this whenever you get any controll value 
+         so there are chances where the particular controll value can be in the string formate 
+        so i am parsing it iam converting it to integer and i am adding it and i am printing it here -->
+    </form>
+</body>
+
+</html>

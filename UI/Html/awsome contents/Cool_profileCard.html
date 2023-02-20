@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #61a1dd;
+        height:100vh;
+        display: grid;
+        place-items: center;
+        font-family: "poppins",sans-serif;
+    }
+    .card{
+        background-color: #fff;
+        max-width: 320px;
+        text-align: center;
+        padding-bottom: 20px;
+        box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    }
+    .card-header{
+        padding:35px 0;
+        background-image: linear-gradient(60deg,#61a1dd,#0083fd);
+    }
+    .card-header img{
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        color: #565656;
+    }
+
+    .card-body h2{
+        text-transform: uppercase;
+        font-size: 24px;
+
+    }
+    .card-body .username{
+        color: #9e9e9e;
+    }
+    .card-body .social-media-list{
+        margin:25px 0;
+        display: flex;
+        justify-content: center;
+    }
+    .social-media-list a{
+        color: #565656;
+        font-size: 30px;
+        transition: color 0.3s;
+    }
+    .social-media-list a:not(:last-child){
+        margin-right: 28px;
+    }
+    .social-media-list a:hover{
+        color:#61a1dd;
+    }
+    .card-body .about{
+        margin-bottom: 45px;
+    }
+    .card-body .btn{
+        text-decoration: none;
+        padding: 16px 48px;
+        background-image: linear-gradient(60deg,#61a1dd,#0083fd);
+        color: #fff;
+        text-transform: capitalize;
+        border-radius: 100px;
+        transition: opacity 0.3s;
+
+    }
+    .card-body .btn:hover{
+        opacity: 0.8;
+    }
+
+</style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <img src="../images/ShashiSir.jpg" alt="profile pitchre">
+        </div>
+        <div class="card-body">
+            <h2>Deepak Borban</h2>
+            <p class="username">@deepak</p>
+            <div class="social-media-list">
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <p class="about">User  interface designer and front-end developer</p>
+            <a href="#" class="btn">Message</a>
+        </div>
+    </div>
+</body>
+</html>

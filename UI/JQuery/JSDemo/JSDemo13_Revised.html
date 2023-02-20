@@ -1,0 +1,37 @@
+<html>
+
+<head></head>
+
+<body>
+    <input type="text" name="" id="txtName" placeholder="Enter the number">
+    <button onclick="generateNumbers()" id="btnNumber">Generate Numbers</button><br>
+    <label for="" id="lblMsg"></label>
+
+    <script>
+
+        function generateNumbers() {
+            let cnt = 1;
+            let str = "";
+            //easiest way to remove comma from the beginning is declare variable isFirst intialize it with true and put it in if condition and check 
+            // 1st time print kar raha hai to comma na print kare on second time make isfirst to false 
+
+            //so it a logic , so do think of logic 
+            let isFirst = true;
+            
+            do {
+                //str = str + "," + cnt;
+                if (isFirst) {
+                    str = cnt;
+                    isFirst = false;
+                } else {
+                    str = str +"," + cnt;
+                    cnt++;
+                }
+            } while (cnt <= 10);
+            var lblMsjObj = document.getElementById("lblMsg");
+            lblMsjObj.innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

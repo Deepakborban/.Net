@@ -1,0 +1,43 @@
+<!-- we have different events and event handlers using which program for your mouse and key board  -->
+<html>
+    <head>
+  
+    </head>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <body>
+        
+        <div
+            onmousedown="mouseDown()"
+            onmouseenter="mouseEntered()"
+            onmouseleave="mouseLeft()"
+            ondblclick="mouseDoubleClick()">
+            <!-- like this we have many more just explore them -->
+        </div>
+        <label for="" id="lblMsg"></label>
+
+        <script>
+            var lblMsgObj = document.getElementById("lblMsg");
+            function mouseDown(){
+                lblMsgObj.innerHTML = "Mouse Down";
+            }
+            function mouseEntered(){
+                lblMsgObj.innerHTML = "Mouse Entered";
+
+            }
+            function mouseLeft(){
+                lblMsgObj.innerHTML = "Mouse Left";
+
+            }
+            function mouseDoubleClick(){
+                lblMsgObj.innerHTML = "Mouse double clicked ";
+
+            }
+        </script>
+    </body>
+</html>

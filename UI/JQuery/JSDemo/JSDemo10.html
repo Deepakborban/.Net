@@ -1,0 +1,44 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function fun1(){
+                var no1 = 10;
+                if(no1 <= 10){
+                    var no2 = 100;//example of var 
+                    console.log(no2);
+                    no2++;
+                }
+                console.log(no2);
+            }
+            fun1();//output of this code is 100 and 101
+
+
+            function fun2(){
+                var num1 = 10;
+                if(num1 <= 10){
+                    let num2 = 100;// example of let 
+                    console.log(num2);
+                    num2++;
+                }
+                console.log(num2);
+            }
+            fun2();//output of this code is 100 and Uncaught ReferenceError: num2 is not defined
+
+            //so remember this whenever you are creating variable using var so that values can be easiely retrived 
+            //meaning scope of var is to the entire function where ever you create dosent matter
+            //so it will be to the entire function because it will attached to the document object 
+
+
+            //but where as when you talk about let so let becomes a local variable 
+            //so let will have life only in the sope where ever they are created 
+            //outside that it will say boss you dont have any variable like that
+
+
+            //so usually what we do in angular and other places we use the keyword let to create the variable we'll not be use var
+            //because of this reason if you create a var then the scope will change you can use the variable in the entire function but i dont want to do that 
+            // i just want to strict my data as much as possible because i want it to be protected 
+            //so if you talk about protection so you should always create variable using let keyword
+        </script>
+    </body>
+</html>

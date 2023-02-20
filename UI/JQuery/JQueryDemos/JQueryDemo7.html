@@ -1,0 +1,55 @@
+<!-- let try to achieve the same what we do in JQueryDemo3.html -->
+<html>
+
+<head>
+    <style>
+        #btnMsg {
+            width: 150px;
+            height: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            box-shadow: 2px 2px 2px #333;
+            /* when i move my mouse pointer her i should get a thumbnail */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="btnMsg">print message</div>
+
+    <!-- <button id="btnMsg">Print Message</button> -->
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //i want to read the content from this id i am doing it for the first time i dont know so you can refer the api document 
+            //you can see there .add() method ......you can see we have a .bind() there
+
+
+            $("#btnMsg").bind('click', function () {//this is my function call back  //and this is my anonymus function---anonymus means which will not have name 
+                //can i call this function with some other function-------not possible , because i dont know the name of it so i cannot call it   and it will be automatically been called on certain event
+                console.log('Welcome from the callback function');
+            });
+
+
+            //also instead of using bind we can write directly like this 
+            $("#btnMsg").click(function () {
+                console.log('Welcome from the click');
+            });
+
+            //and  instead of directly specify function i can always write a function name 
+            $("#btnMsg").bind('click', printMessage)
+        })
+        //and after this i can specify function
+        function printMessage() { //i can call this function because i know the name of it 
+            console.log('Welcome from the printMessage function');
+        }
+
+//summary
+//if you are using event so you have to mention both what is the event and who is the handler for it 
+//but you can directly use click it says you want a click event so for that event you just have to specify the handler
+    </script>
+</body>
+
+</html>

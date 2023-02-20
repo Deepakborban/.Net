@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" name="" id="txtName" placeholder="Enter Name">
+        <br>
+        <button id="btnAdd" onclick="addName()">Add Name</button>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <p>now when you wearing a hat of a user and look into it what is the pain point for you </p>
+        <img src="../js_images/64.PNG" alt="">
+        <p>1st after adding i have to come and remove the text written in text box then add new one
+            so how do you clear the text ,as soon as its added you have to clear the text refer jsdemo22            
+        </p>
+         <script>
+             var names = new Array();  //this is how to create a global array so that we can access this particular array
+
+             function addName(){
+                 console.log(names);
+                let name = document.getElementById("txtName").value;
+                names.push(name);//push Appends new elements to the end of an array, and returns the new length of the array
+                //now my array will gone to grow ,so put a console  and check how it grows and before adding also check 
+                console.log(names);
+
+                
+             }
+
+             function getData(){
+
+             }
+         </script>
+    </body>
+</html>

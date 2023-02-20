@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Student Report</h3>
+    <table border ="1" align="center" cellspacing="12" cellpadding="10"> 
+<!-- attributes of table
+1st border----to get border outside the tabe
+2nd align-----center(will move table to the center) or left or right
+3rd cellspacing----1 or 2 or...any num to give space between the cells
+4rth cellpading ----to give space between text and the box-->
+        <!-- We are creating the heading part of table thats why we have written it inside the table   -->
+        <!-- inside this well gone to have table row -->
+      
+        <thead>
+        <!-- tr is table row -->
+            <tr>
+        <!-- We want to merge the column so we use the attribute colspan and we want to merge 3 row so we write 3 inside it -->
+        <!-- similarly if we want to merge rows we use rowspan -->
+        <!-- th is table heading -->
+                <th colspan="3">Student Report : S1000</th>
+            </tr>
+         <!-- now we are creating 2nd Column of the table -->
+            <tr>
+                <th>Subject ID</th>
+                <th>Mark</th>
+                <th>Remark</th>
+            </tr>
+        </thead>
+        <!-- now we have created the heading and want to create simple rows and column so we write it ouside the thead -->
+        <!-- we are creating table body so we write tbody -->
+        <tbody>
+            <!-- 1st row  -->
+            <tr>
+                <th>S1001</th>
+                <th>45</th>
+                <th>P</th>
+            </tr>
+            <!-- 2nd row -->
+            <tr>
+                <th>S1002</th>
+                <th>58</th>
+                <th>P</th>
+            </tr>
+            <!-- 3rd row --> 
+            <tr>
+                <th>S1003</th>
+                <th>12</th>
+                <th>F</th>
+            </tr>
+            <!-- 4rth row -->
+            <tr>
+                <th>S1004</th>
+                <th>98</th>
+                <th>P</th>
+            </tr>
+            <!-- 5th row  -->
+            <tr>
+                <td>Total</td>
+                <td colspan="2">210</td>
+            </tr>
+            <!-- 6throw -->
+            <tr>
+                <td>Result</td>
+                <td colspan="2">Pass</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>

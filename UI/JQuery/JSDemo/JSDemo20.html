@@ -1,0 +1,44 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function getStudentData() {
+
+            let students = [
+                {//this is first student data
+                    name: "Deepak",
+                    marks: [30, 40, 50]
+                },
+                {//this is 2nd student data
+                    name: 'Deepesh',
+                    marks: [10, 20, 30]
+                }
+            ]
+            //console.log(students);
+            //console.log('Name ' + students[0].name);
+            //console.log('mark' + students[0].marks[0]);      //here i am printing only Deepak and 30 
+            //but i want to print other details also for all this students
+            printStudentResult(students);
+        }
+
+        function calculateStudentResult(mark1, mark2, mark3) {
+            return (mark1 + mark2 + mark3);
+        }
+        function printStudentResult(students) {
+            alert(students);
+            //how can you fetch the object
+            for(let i=0; i<students.length; i++){
+                console.log(students[i].name);
+                //marks is also an array so to fetch marks we need 1 mor for loop
+                for(j=0; j<students[i].marks.length; j++){
+                    console.log(students[i].marks[j]);
+                }
+            }
+        }
+        getStudentData();
+    </script>
+</body>
+
+</html>

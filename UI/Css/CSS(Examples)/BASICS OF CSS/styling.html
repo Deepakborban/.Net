@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- SO by this we are styling our element in the same page
+    *****************Internal styling*****************************
+so this is the PAGE LEVEL STYLING  -->
+
+<!-- <style>
+        p{
+            color:yellow;
+        }
+    </style> -->
+
+<!-- now if we create a website which have multiple web pages so style of all the pages should be similar
+other wise it looks odd or not good so all the para should have same font and all the heading should have same font and all
+so will i keep writing the same code again and again between all the pages
+chalo ek baar kar bhi diya par client ne bola ki deepak ye paragraph ka color change karo
+so i have to goto all the pages and keep modify the all pages accross the website-->
+
+<!--*************SOLUTION for this is******************* -->
+<!-- create a different css file and use that particular css file here
+How do we do this
+Remember------the css file falls under the dynamic pages or falls uder the value added objects
+  it is used in a static page but they are not static page content it is nor use to print something on the screen
+        this is to formate something on the screen
+    so it is a value added object its not that ki without that i acnnot do anything i still have a content you can see that my website is still there
+but i use css to add more value to my page
+
+thats a reason when ever you create css make sure you create a css folder
+dont add it in a root folder directly-->
+
+
+<!-- so i create a folder name it css
+we can call it css or style it depends on a company again some say style some say css it depends -->
+
+<!-- now how to use this particular .css file in our .html file
+so we link this page on the pages where we want to apply this css
+
+ for this in head section just write
+<link rel="stylesheet" href="here just specify the css file path just like what we have did with imgaes " >   -->
+<!-- ********************External styling************************** -->
+
+<!-- link is use to link many other things thats why we have mentioned here  what is the type  i am trying to link here
+we are linking "Stylesheet" -->
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- there are may ways to change move color .....style the element
+        one of the most fastest and significant which we usually use if  it is only one or two element in the entire page which i want to heighlight
+SO in this case we always go with the
+**********************inline styling*****************************
+   -->
+<!-- i want to change the heading of this particular para
+so i just put syle specify font family to what ever we want-->
+    <h1 style="font-family: 'Courier New', Courier, monospace;">Headings 1</h1>
+<!-- means i want change the color of this particular para
+so i just put a style here then i'll specify color to red -->
+    <p style="color: red;">This is my para 1</p>
+    <p>This is my para 1</p>
+    <p>This is my para 1</p>
+    <p>This is my para 1</p>
+    <p>This is my para 1</p>
+
+<!--PROBLEM 1--------but this becomes difficult you to handle
+when ever you want to work with multiple same element and i want to heighlight them
+now i cant just keep doing this if its a huge application-->
+
+<!-- PROBLEM 2----------Debugging becomes difficult -->
+
+<!-- PROBLEM 3-----------Maintainance become difficult
+what do i meant with maintainance
+suppose i showed it to my client and client said that deepak this red color is not looking good
+can you please change it to some other color then i have to come back to each line
+change color in each line  -->
+    <p style="color: red;">This is my para 1</p>
+    <p style="color: red;">This is my para 1</p>
+    <p style="color: red;">This is my para 1</p>
+    <p style="color: red;">This is my para 1</p>
+    <p style="color: red;">This is my para 1</p>
+
+<!--*********** SOLUTION for this is ************** -->
+<!-- we write css in head section
+for this we specify <style> and ill say which is the element i want to style
+    in our case the element is p so i'll just specify p{color: yellow}
+</style> -->
+
+</body>
+</html>
+
+
+<!--+++++++++++++++********SUMMARY**********++++++++++++++++++++++++++= -->
+<!-- What are the 3 ways of styling
+Inline ------- by using the style attribute inside HTML elements
+Internal ------ by using a <style> element in the <head> section
+External ------- by using a <link> element to link to an external CSS file-->
+
+
+<!-- aagar hume teeno styling likh di for some element to
+heighest priority given to inlne styling----inline me jo likha hai wo apply hoga baaki 2 nai-->
+
+<!-- but when we come to internal or external
+here order matter
+like in head section if you write like this
+
+
+<style>
+        p{
+            color:yellow;
+        }
+</style>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+
+in this case our dom structure see that p ka color red to red kar dega
+fir dekhega link me jaake ki .css me to p ka color yellow hai to yellow kar dega -->
+
+<!-- and if we write like This
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+    p{
+        color:yellow;
+    }
+</style>
+
+
+to 1st dom  dekhega ki link me yellow to yellow kar dega
+fir internal styling me dekhega ki p ka color red to yellow hata ke red kardega  -->
+
+
+<!--thats why always write link on the top kyuki wo css hume saare page pe same chahiye -->
+<!--then use internal kyuki wo sirf is page pe apply karna hai-->
+<!-- then write inline kyuki wo sirf usi line pe apply karna hai -->
+
+<!-- to check run this on browser inspect goto element then style and observe-->
+
+
+<!-- ab teeno likhe inline internal or external
+teeno me alag alag chij likhi
+inline me color dere.
+internal me font size dere
+external me font-family dere
+
+to our dom structure inline se color lelega
+internal se font size lelega
+external se font family lelga
+
+#################********means  css inherit or thake the information from its parent or the other css what we have *****************########### 
+
+
+or agar teeno me ek hi parameter diya hai to it goes the order in which we have write them -->

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #010101;
+        }
+        .profile-container{
+            width: 500px;
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .profile-container .img-bar{
+            height:100%;
+            background-image: url("../images/img1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            transition: all 1s;
+            border-radius: 5px;
+        }
+        .profile-container .img-bar:nth-child(1){
+            width: 25%;
+            z-index: 6;
+            transition-delay: 0s;
+        }
+        .profile-container .img-bar:nth-child(2){
+            width: 50%;
+            z-index: 5;
+            transition-delay: 0.2s;
+        }
+        .profile-container .img-bar:nth-child(3){
+            width: 75%;
+            z-index: 4;
+            transition-delay: 0.4s;
+        }
+        .profile-container .img-bar:nth-child(4){
+            width: 100%;
+            z-index: 3;
+            transition-delay: 0.6s;
+        }
+        .profile-container:hover .img-bar{
+            transform:translateY(-100%);
+        }
+        .profile-container:hover .img-bar:nth-child(1){
+            transition-delay: 0.6s;
+        }
+        .profile-container:hover .img-bar:nth-child(2){
+            transition-delay: 0.4s;
+        }
+        .profile-container:hover .img-bar:nth-child(3){
+            transition-delay: 0.2s;
+        }
+        .profile-container:hover .img-bar:nth-child(4){
+            transition-delay: 0s;
+        }
+        .profile-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height:100%;
+            padding: 0 30px;
+            text-transform: capitalize;
+            font-family: Arial;
+            text-align: center;
+            transform: translateY(100%);
+            transition: all 1.5s;
+            transition-delay: 0.3s;
+            color: #444;
+
+        }
+        .profile-content p{
+            line-height: 1.6;
+            margin:20px 0 30px;
+        }
+        .profile-content .btn{
+            text-decoration: none;
+            padding: 10px 20px;
+            color: #444;
+            border:3px solid #444;
+            font-weight: bolder;
+        }
+        .btn:hover{
+            background-color: rgb(190, 170, 170);
+        }
+        .profile-container:hover .profile-content{
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <span class="img-bar"></span>
+        <span class="img-bar"></span>
+        <span class="img-bar"></span>
+        <span class="img-bar"></span>
+        <div class="profile-content">
+            <h2>hey! i am Deepak Borban</h2>
+            <p>so i have to say something about myself. sometime it is hard to
+                introduce yourself because you know yourself so well that you 
+                do not know where to start with
+            </p>
+            <a href="#" class="btn">See my work &#10171</a>
+        </div>
+    </div>
+</body>
+
+</html>

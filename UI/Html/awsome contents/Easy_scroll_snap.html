@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider{
+            overflow: auto;
+            display: flex;
+            scroll-snap-type: x mandatory;
+            height:150px;
+        }
+        .slider-item{
+            min-width:100%;
+            scroll-snap-align: start;
+            height:150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div style="background-color: green; " class="slider-item">One</div>
+        <div class="slider-item">Two</div>
+        <div class="slider-item">Three</div>
+    </div>
+</body>
+</html>

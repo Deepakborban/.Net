@@ -1,0 +1,15 @@
+/* 
+    Document   : preload
+    Created on : May 3, 2013, 2:23:49 AM
+    Author     : Shashikanth
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.tree ul {
+	display: none;
+}
+
+.tree .tree_expanded {
+	display: block;
+}

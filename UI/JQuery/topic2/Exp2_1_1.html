@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Selecting Child Element using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <div>Category</div>
+        <ul id="nav">
+            <li><a href="#anchor1">Anchor 1</a></li>
+            <li><a href="#anchor2">Anchor 2</a></li>
+            <li><a href="#anchor3">Anchor 3</a></li>
+        </ul>
+        <script type="text/javascript">
+            //which ever i am clicking change the text of it  link when i click on anchor3 the text should change to hello
+            jQuery('#nav li>a').click(function(){
+                console.log(this);
+                alert(this.text); 
+                // i am not getting the id but i am getting the text using this correct
+                this.innerText = 'Hello';
+            });
+        </script>
+    </body>
+</html>

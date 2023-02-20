@@ -1,0 +1,28 @@
+<!-- write a program which will print the 1st row element last row element 1st column element 
+    last column element primary diagonal element  secondary diagonal element -->
+
+    <html>
+    <head></head>
+    <body>
+        <button onclick="generateMatrix()" id="btnNumber">Generate Matrix</button>
+        <br>    
+        <label for="" id="lblMsg"></label>
+
+        <script>
+            function generateMatrix(){
+                let str = "";
+                let cnt = 1;
+                for(let i =0; i<3; i++){//this loop will controll the rows 
+                    for(let j=0; j<3;j++){//this loop will controll the columns
+                        str = str + " " + cnt;
+                        cnt++;
+                    }
+                    str = str + "</br>"
+                }
+                var lblMSgObj = document.getElementById("lblMsg");
+                lblMSgObj.innerHTML = str;
+            }
+        </script>
+    </body>
+
+</html>

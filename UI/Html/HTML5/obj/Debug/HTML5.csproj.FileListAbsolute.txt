@@ -1,0 +1,10 @@
+E:\DOTNET_Apps\ClientSide-Demo\HTML5\bin\HTML5.dll
+E:\DOTNET_Apps\ClientSide-Demo\HTML5\bin\HTML5.pdb
+E:\DOTNET_Apps\ClientSide-Demo\HTML5\obj\Debug\HTML5.dll
+E:\DOTNET_Apps\ClientSide-Demo\HTML5\obj\Debug\HTML5.pdb
+E:\DOTNET_Apps\ClientSide-Demo\HTML5\obj\Debug\HTML5.csprojResolveAssemblyReference.cache
+E:\Demos\DOTNET_Apps\ClientSide-Demo\HTML5\bin\HTML5.dll
+E:\Demos\DOTNET_Apps\ClientSide-Demo\HTML5\bin\HTML5.pdb
+E:\Demos\DOTNET_Apps\ClientSide-Demo\HTML5\obj\Debug\HTML5.csprojResolveAssemblyReference.cache
+E:\Demos\DOTNET_Apps\ClientSide-Demo\HTML5\obj\Debug\HTML5.dll
+E:\Demos\DOTNET_Apps\ClientSide-Demo\HTML5\obj\Debug\HTML5.pdb

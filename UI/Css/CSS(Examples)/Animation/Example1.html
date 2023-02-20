@@ -1,0 +1,35 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Example1.aspx.cs" Inherits="CSS3Demos.Animation.Example1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+            @keyframes myfirst
+            {
+                from {background: yellow;}
+                to {background: red;}
+            }
+
+            @-webkit-keyframes myfirst /* Safari and Chrome */
+            {
+                from {background: yellow;}
+                to {background: red;}
+            }
+            
+            div
+            {
+                width:100px;
+                height:100px;
+                background:red;
+                animation:myfirst 5s;
+                -webkit-animation:myfirst 5s; /* Safari and Chrome */
+            }
+        </style>
+</head>
+<body>
+    <div>    
+    </div>
+</body>
+</html>

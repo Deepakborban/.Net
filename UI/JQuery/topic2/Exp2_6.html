@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Searching form elements using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+        <style type="text/css">
+            .even{
+                background: #333;
+                color: #fff;
+            }
+            .other{
+                background: #6666ff;
+                color: #fff;
+            }
+            .boy{
+                background: #ff3333;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <table>
+            <tr>
+                <td>User Name:</td>
+                <td><input type="text" name="name"/></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="pwd"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Login"/></td>
+            </tr>
+        </table>
+        
+        <script type="text/javascript">
+            jQuery(':submit').click(function(){
+                alert('Form submitted...');
+                var nm = jQuery(':text').val();//:text means whichever has type text .val() get the value of it , if you write :password so you will get the password data
+                alert(nm+", thank you very much for entering your information.");
+            })           
+            
+        </script>
+    </body>
+</html>

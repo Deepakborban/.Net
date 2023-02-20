@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fetching data from Child Element using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <ul>
+            <li>First item</li>
+            <li class="selected">Second item</li>
+            <li>Third item</li>
+            <li>Fourth item</li>
+            <li>Fifth item</li>
+        </ul>
+        
+        <script type="text/javascript">
+            alert(jQuery('li.selected').nextAll().text());     
+            // li.selectd means in the list index we have a class  .represent class is in't it 
+            //so from this next all text will be printed        
+        </script>
+    </body>
+</html>

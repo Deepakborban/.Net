@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <!-- to create canvas we have canvas tag  -->
+<canvas id="myCanvas" width="200" height="100"
+style="border:1px solid #d3d3d3;">
+<!-- if your browser does not support the canvas so canvas will become null 
+    so at that particular point of time my browser put a message saying Your browser does not support the HTML5 canvas tag. -->
+Your browser does not support the HTML5 canvas tag.</canvas>
+<!-- to draw i have wrute little bit of java script  -->
+<script>
+    // i want to read the canvas i want to draw something on canvas so i should know where exactly my canvas is 
+    //so to know my canvas or to get object of my canvas iam reading  that canvas by the id 
+    // document.getElementById("myCanvas") getting canvas element by id so now the canvas object is stored in variable c 
+
+    //this line is to read element based id
+    var c = document.getElementById("myCanvas");
+    //now we got the object so you need to know where i have to draw it 
+    //i have such  a big canvas so ihave to set weather its a 2d diagram or the 3d diagram
+    // so to do that we need to specify the canvas type here so we specify context here 
+    var ctx = c.getContext("2d");
+    //now i have to stat painting so i'll move my brush so first value is for x 2nd is for y 
+    ctx.moveTo(0, 0);
+//so draw the line to 100,100 so it has drawn the line but has not printed yet 
+    ctx.lineTo(100, 100); 
+    //so to print we have to say stroke(); as soon as you say stroke it will draw the line 
+    ctx.stroke();
+</script>
+</body>
+</html>

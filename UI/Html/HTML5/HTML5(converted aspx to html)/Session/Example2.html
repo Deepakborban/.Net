@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        function CartAdd(sval) {
+            if (typeof (Storage) != "undefined") {
+                if (localStorage.totalval) {
+                    localStorage.totalval = Number(localStorage.totalval) + sval;
+                }
+                else {
+                    localStorage.totalval = sval;
+                }
+                document.getElementById("total").innerHTML = "Rs. " + localStorage.totalval + ".00";
+            }
+            else {
+                alert("Sorry, your browser does not support web storage...");
+            }
+        }
+
+        function ClearSession() {
+            localStorage.clear();
+            document.getElementById("total").innerHTML = "Rs. 00.00";
+        }
+
+        function sessionstore() {
+            var totalAmt = localStorage.totalval;
+            sessionStorage.setItem("totalAmt", totalAmt);
+        }
+        </script>
+</head>
+<body>
+<h3>Local Store</h3>
+        <hr/>
+        <form action="Example3.html" onsubmit="sessionstore()">
+        <table border="0">
+            <tr>
+                <th>Item #</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Liril</td>
+                <td>Rs. 18.00 </td>
+                <td><input type="button" value="Add to cart" 
+                    onclick="CartAdd(18)"/></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Dove</td>
+                <td>Rs. 28.00 </td>
+                <td><input type="button" value="Add to cart" 
+                    onclick="CartAdd(28)"/></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rose</td>
+                <td>Rs. 24.00 </td>
+                <td><input type="button" value="Add to cart" 
+                    onclick="CartAdd(24)"/></td>
+            </tr>
+            <tr>
+                <td colspan="2">Total</td>
+                <td><label id="total"></label></td>
+                <td><input type="button" value="Clear" 
+                    onclick="ClearSession()"/></td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center">
+                    <input type="submit" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

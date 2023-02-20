@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Audio & Video Demo</title>
+    <script type="text/javascript">
+        function playPause() {
+            var vid = document.getElementById("myvideo");
+            if (vid.paused) {
+                vid.play();
+            }
+            else {
+                vid.pause();
+            }
+        }
+        </script>
+</head>
+<body>
+        <b>Play Video</b>        
+        <br/><br/>
+        <!-- i am giving the width so as per the aspect ratio it will automatically apply the height 
+         and i throught controls i am specifying weather i am gone to have the controlls or not 
+        similarly you have autoplay  weather you want autoplay or not -->
+        <!-- <video width="620" controls="controls"  autoplay="autoplay"> -->
+
+    <video width="620" controls="controls"  >
+        <!-- the source is important some of the browser will support you mp4 some not support mp4 so try to convert it to ogg or ogv file -->
+            <source src="../video/a2.mp4" type="video/mp4" />       
+            Your browser does not support the video tag.
+        </video>
+        <br> 
+        <!-- in the same way you can have the audio  -->
+        <audio controls="controls">
+            <source src="../Saare Bolo Bewafa - Bachchhan Paandey.mp3" type="audio/mp3">
+        </audio>
+        <p>take some beautiful pitcures and  you can buid a website like gaana or spotify</p>
+</body>
+</html>

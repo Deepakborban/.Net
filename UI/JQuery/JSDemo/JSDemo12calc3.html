@@ -1,0 +1,91 @@
+<html>
+
+<head></head>
+
+<body>
+    <input type="text" name="" id="txtNo1" placeholder="Enter 1st number"><br>
+    <input type="text" name="" id="txtNo2" placeholder="Enter 2nd number"><br>
+    <label for="" id="lblResult"></label> <br><br>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">X</button>
+    <button onclick="calculate('/')">/</button>
+    <script>
+        //Do you know what is the difference between if and switch 
+        //where to use if and where to use switch
+
+        //in case if-------it goes case by case if this operator is not + then goes to the else part if the operator is not - then go to  the else part .....soon
+
+        //but when you talk about switch case switch case is not like that it is like direct mapping its mapping to the exact value 
+        //it will not go to switch 1 then 2  then 3 .....it will never do that
+        //if it a case 3 then it will directly go to case 3 and executes that 
+
+
+        //where can you use if and where switch
+        //switch-----------when you have a same variable with different value like here variable oper have different value => + - * /
+        //variable is same but values is different 
+        //so here in this program we have the same variable with different value so if is not recommended here 
+        //because if is always a costly process 
+        //so when you think of optimization or standardization so in the place of this we can use case  
+
+        //this is the controller
+        function calculate(oper) {
+            var no1 = parseInt(document.getElementById("txtNo1").value);
+            var no2 = parseInt(document.getElementById("txtNo2").value);
+            var result = 0;
+            /*if (oper == '+') {
+                result = add(no1, no2);
+            }
+            else if (oper == '-') {
+                result = sub(no1, no2);
+            }
+            else if (oper == '*') {
+                result = mul(no1, no2);
+            }
+            else if (oper == '/') {
+                result = div(no1, no2);
+            }*/
+            
+            //you should always go with switch cases when its a same variable with different value  
+            //and you are doing with is equal to =  like if(oper = '+')    oper = '-'...............like this in this case you should and must go with switch cases 
+            // i am saying operator = , operator  = , i am not saying > or <   
+            //if it is < or > then you should not use switch cases 
+            //for example: - i want to check if the mark is less than 35 then make the student as fail
+            //if the mark is >= 35 and < 60 then give him pass 
+            //if the mark is >=60 and <75 make him second class...............like that in this cases you should go with if else 
+
+            switch(oper){
+                case '+' : result =  add(no1, no2); break;
+                case '-' : result =  sub(no1, no2); break;
+                case '*' : result =  mul(no1, no2); break;
+                case '/' : result =  div(no1, no2); break;
+            }
+      
+            printResult(result);
+
+        }
+       
+        function printResult(result)
+        {
+            
+            var lblResult = document.getElementById("lblResult");
+            lblResult.innerHTML = "<b> Result is : </b>" + result;
+
+        }
+         function add(no1, no2) {
+            return no1 + no2;
+        }
+        function sub(no1, no2) {
+            return no1 - no2;
+        }
+        function mul(no1, no2) {
+            return no1 * no2;
+        }
+        function div(no1, no2) {
+            return no1 / no2;
+        }
+    </script>
+
+</body>
+
+</html>

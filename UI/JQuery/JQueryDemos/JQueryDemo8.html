@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <style>
+        .msg {
+            width: 150px;
+            height: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            box-shadow: 2px 2px 2px #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="msg" id="btnMsg">print message</div>
+    <div class="msg"  id="btnShow">Show message</div>
+
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script>
+        //Remember this is like a initialization function you should not have multiple   $(document).ready function it should be only one and 
+        //all your initialization code will be written here 
+        $(document).ready(function () {
+            $("#btnMsg").bind('click', function () {
+                console.log('Welcome to jquery')
+            });
+            $("#btnShow").bind('click', function () {
+                console.log('Hello to jquery')
+            });
+        })
+
+    </script>
+</body>
+
+</html>

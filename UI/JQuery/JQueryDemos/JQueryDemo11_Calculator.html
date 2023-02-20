@@ -1,0 +1,48 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <input type="text" name="" id="txtNo1" placeholder="0"><br>
+    <input type="text" name="" id="txtNo2" placeholder="0"><br>
+    <button id="btnAdd">+</button>
+    <button id="btnSub">-</button>
+    <button id="btnMul">*</button>
+    <button id="btnDiv">/</button><br>
+    <label for="" id="lblResult"></label>
+
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $("#btnAdd").bind('click', function() {
+                let no1 = parseInt($("#txtNo1").val());
+                let no2 = parseInt($("#txtNo2").val());
+                let result = no1 + no2;
+                $("#lblResult").text('Result is :' + result);
+            });
+            $("#btnSub").bind('click', function() {
+                let no1 = parseInt($("#txtNo1").val());
+                let no2 = parseInt($("#txtNo2").val());
+                let result = no1 - no2;
+                $("#lblResult").text('Result is :' + result);
+            });
+            $("#btnMul").bind('click', function() {
+                let no1 = parseInt($("#txtNo1").val());
+                let no2 = parseInt($("#txtNo2").val());
+                let result = no1 * no2;
+                $("#lblResult").text('Result is :' + result);
+            });
+            $("#btnDiv").bind('click', function() {
+                let no1 = parseInt($("#txtNo1").val());
+                let no2 = parseInt($("#txtNo2").val());
+                let result = no1 / no2;
+                $("#lblResult").text('Result is :' + result);
+            });
+        })
+
+    </script>
+</body>
+
+</html>

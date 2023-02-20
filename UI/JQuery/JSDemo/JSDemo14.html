@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="generateMatrix()" id="btnNumber">Generate Matrix</button>
+        <br>    
+        <label for="" id="lblMsg"></label>
+
+        <script>
+            function generateMatrix(){
+                let str = "";
+                let cnt = 1;
+                for(let i =0; i<3; i++){//this loop will controll the rows 
+                    for(let j=0; j<3;j++){//this loop will controll the columns
+                        str = str + " " + cnt;
+                        cnt++;
+                    }
+                    str = str + "</br>"
+                }
+                var lblMSgObj = document.getElementById("lblMsg");
+                lblMSgObj.innerHTML = str;
+            }
+        </script>
+    </body>
+
+</html>

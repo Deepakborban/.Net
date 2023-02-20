@@ -1,0 +1,33 @@
+<!-- in input if i give the number 10 so it will print 1 to 10 
+if i give input as -5 then the output should be  1 0 -1 -2 -3 -4 -5 -->
+<html>
+    <head></head>
+    <body>
+        <input type="text" name="" id="txtName" placeholder="Enter the number">
+        <button onclick="generateNumbers()" id="btnNumber">Generate Numbers</button><br>
+        <label for="" id="lblMsg"></label>
+       
+        <script>
+      
+            // function generateNumbers(){
+            //     let cnt = 11;
+            //     let str = "";
+            //    do{
+            //         str = str + "," + cnt;
+            //         cnt++; 
+            //     } while(cnt <= 10);
+            //     var lblMsjObj = document.getElementById("lblMsg");
+            //     lblMsjObj.innerHTML = str;
+        //  }
+
+            function generateNumbers(){
+                let str = "";
+                for(let i=1; i<=10; i++){
+                    str = str + "," + i;
+                }
+                var lblMsjObj = document.getElementById("lblMsg");
+                lblMsjObj.innerHTML = str;
+            }
+        </script>
+    </body>
+</html>

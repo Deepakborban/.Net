@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #eee;
+        }
+        .ripple-btn{
+            text-decoration: none;
+            background-color: #5c6e90;
+            color: #fff;
+            padding: 20px 40px;
+            border-radius: 30px;
+            font-family: verdana;
+            font-size: 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+
+        }
+        .ripple-btn span{
+            position: absolute;
+            background-color: #fff;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation:rippleEffect 1.5s 1;
+
+        }
+        @keyframes rippleEffect{
+            from{
+                width:0;
+                height:0;
+                opacity: 0.7;
+            }
+            to{
+                width: 500px;
+                height: 500px;
+                opacity: -0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="ripple-btn">Click</a>
+
+
+
+
+    <script>
+        const rippleBtn = document.querySelector(".ripple-btn");
+        rippleBtn.addEventListener('click',(e)=>{
+            let ripples = document.createElement('span');
+
+            const horizontalPos = e.clientX - e.target.offsetLeft;
+            const verticalPos = e.clientY - e.target.offsetTop;
+            ripples.style.left = horizontalPos + "px";
+            ripples.style.top = verticalPos + "px";
+
+            rippleBtn.appendChild(ripples);
+
+            setTimeout(()=>{
+                ripples.remove();
+            
+            },1500);
+
+        })
+    </script>
+</body>
+</html>

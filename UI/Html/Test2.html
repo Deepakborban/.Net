@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- to call storedata() either we can write onload="storeData()"  nahi to aap script me direct function ko call kar sakte ho -->
+<!-- <body onload="storeData()"> -->
+
+<body>
+    <h1>Welcome</h1>
+    <label id="lblName"></label>
+    <script>
+        function storeData() {
+            var name = '';
+            if (localStorage !== 'undefined') {
+                //here we are getting the data in test1 we are setting the data so we write getItem
+                name = localStorage.getItem('username', name);
+            }
+            //this is to print data 
+            document.getElementById("lblName").innerHTML = name;
+        }
+        //calling function in script 
+        storeData();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!--
+Author : Shasikanth R
+Email  : shashiknathcr@gmail.com
+Mobile : +91-8971472005
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Playing with table using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+        <style type="text/css">
+            table tr.abc{
+                background: #333;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <table width="300">
+            <tr><td>0</td><td>even</td></tr>
+            <tr><td>1</td><td>odd</td></tr>
+            <tr><td>2</td><td>even</td></tr>
+            <tr><td>3</td><td>odd</td></tr>
+            <tr><td>4</td><td>even</td></tr>
+        </table>
+        
+        <script type="text/javascript">
+            jQuery('tr:even').addClass('abc'); // table with the even rows i am adding a class named abc
+        </script>
+    </body>
+</html>

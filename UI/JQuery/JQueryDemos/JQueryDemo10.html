@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+     <input type="text" name="" id="txtName" placeholder="Enter your name">
+    <br>
+        <button id="btnMsg">Get Message</button>
+<br>
+<label for="" id="msg"></label>
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script>
+      
+        $(document).ready(function () {
+            $("#btnMsg").bind('click', function () {
+                let name = $("#txtName").val();
+                console.log('Welcome  ' + name);
+                //to put it in label in java script we write 
+                // document.getElementById("msg").innerText = 'Welcome ' + name;
+                //so how will you replace document.getElementById("msg") in jQuery ---------$("#msg")     and innerText is replaced by .text
+                $("#msg").text('Welcome ' + name);
+            });
+        })
+
+    </script>
+</body>
+
+</html>

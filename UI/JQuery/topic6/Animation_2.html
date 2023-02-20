@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Traditional Menu Bar</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="css/animation.css" rel="stylesheet"/>
+        <script type="text/javascript" src="js/jquery.1.3.1.js"></script>        
+        <style type="text/css">
+            .box {
+                background-color: #fff;
+                position: relative;
+            }
+
+            #revealUp {
+                height: 0;
+                overflow: hidden;
+                position: absolute;
+                display: none;
+                bottom: 0;
+                background-color: #c00;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                
+                $('#animate').click(function () {
+                    var $box = $('#revealUp');
+      
+                    if ($box.height() > 0) {
+                        $box.animate({ height : 0 });
+                    } else {
+                        $box.animate({ height : '100%' });
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h2>Making elements visible by sliding them up</h2>
+        <input type="button" id="animate" value="animate" />
+        <div class="box">
+            <div id="revealUp">
+                <p>We want to reveal or toggle a block of content into view. This can be triggered by the
+user clicking some element or can be fired by some other event.</p>      
+            </div>
+        </div>
+    </body>
+</html>

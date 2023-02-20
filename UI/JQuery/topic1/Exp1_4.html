@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example5 | Fetching tag data using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+    </head>
+    <body bgcolor="-orange">
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <a href="#">Link 1</a><br/>
+        <a href="#">Link 2</a><br/>
+        <a href="#">Link 3</a><br/>
+        <a href="#">Link 4</a><br/>
+        <a href="#">Link 5</a><br/>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                alert('Page contains ' + jQuery('a').length + ' <a> elements!\n'+jQuery(document.body).attr('bgcolor') + ' background');
+            })   
+            //you can see here we have 5 anchor tags so to know how many anchor tags you have you can write--------jQuery('a').length 
+            //jQuery('a') stands for anchor its a element selector , so through .length it will tell me how many anchors are available
+            //then i'll print that information in the document.body and i am printing the attribute of the document 
+            //iam reading the bgcolor- background color and i am printing that background color 
+            //because background color is the attribute there so you have to say .attr 
+            //similarly jquery('#') stands for id selector
+            //jquery('.') stands for class selector
+
+        </script>
+    </body>
+</html>

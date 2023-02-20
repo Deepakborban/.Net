@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+     <input type="text" name="" id="txtName" placeholder="Enter your name">
+    <br>
+    <!-- when user clicks on this button you need to read the value from the text box and put it in a alert -->
+    <button id="btnMsg">Get Message</button>
+
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script>
+        //i am doing for the 1st time dont know how to read from the text box just go to jquery api document even if you feel this is difficult to read
+        //as google aunty saying aunty aunty how to read ----jquery to read the text from the input ---- aunty will say its a val() function 
+        //even if you are 10-15 year experience you annot remember all this things so this is called on the fly learning
+        //JIT learning---------Just in time learning
+        $(document).ready(function () {
+            $("#btnMsg").bind('click', function () {
+                let name = $("#txtName").val();
+                console.log('Welcome  ' + name);
+            });
+        })
+
+    </script>
+</body>
+
+</html>

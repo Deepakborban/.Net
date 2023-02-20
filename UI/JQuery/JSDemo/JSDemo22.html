@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" name="" id="txtName" placeholder="Enter Name">
+        <br>
+        <button id="btnAdd" onclick="addName()">Add Name</button>
+        <!-- 2nd problem is when user say add name after that the cursor should automatically be move to textbox 
+        so we need our cursor back to the input -->
+         <script>
+             var names = new Array();
+
+             function addName(){
+                
+                let name = document.getElementById("txtName").value;
+                names.push(name);
+                //to make textbox clear after adding we just put blank in it 
+                document.getElementById("txtName").value = '';
+                //this is to get focus in input 
+                document.getElementById("txtName").focus();
+                
+
+                
+             }
+
+             function getData(){
+
+             }
+         </script>
+    </body>
+</html>

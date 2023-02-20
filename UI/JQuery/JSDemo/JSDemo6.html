@@ -1,0 +1,48 @@
+<html>
+
+<head></head>
+
+<body>
+    <!-- i am bothered more about the id here     I want to read the name -->
+    <input type="text" name="" id="txtName">
+    <button onclick="printName()">Click me</button>
+
+
+
+    <script>
+        function printName() {
+            // variable is dynamic in java script , when you talk about java script it is a dynamic language
+            // so i am not bothered About the type here 
+            //meaning i'll say var name="Deepak"
+            var name = "Deepak";
+            //and print it here 
+            alert("Name : " + name);
+            //and i can reuse the same variable here 
+            name = 45;
+            //i put one more alert saying age = 45
+            alert("age : " + name);
+            //now what if i add 5 to name
+            name = name + 5;
+            alert("adding 5 to name variable : " + name);
+            //so based on the data what ever you are entering ,the type of the variable will automatically get changed  
+            //thats why it is called dynamic language
+            //so i am not bothered about type  
+            //but if you want to check the type of your data the you can check using typeof()
+            alert("Name : " + name +  "and type is :" + typeof(name)); //here type  = number
+            name = "shashi";
+            alert("Name : " + name +  "  and type is :" + typeof(name)); // here type = string
+            //   so the type we cannot gurantee that it will always be same so it leads to be lot of confusion
+            //thats a reason in ecma 2015 they come out with type script what we are using in angular there we mention
+            // particular type  
+            //and if the developer wants to change the type  it will gone to give you error 
+            //its a compile time 
+            //whenever you are trying to write some code ,while typing the code itself youe IDE is smart enough
+            // that you are using the typescript(we are adding type to the script )
+
+
+
+        }
+    </script>
+</body>
+
+</html>

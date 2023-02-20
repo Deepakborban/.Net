@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+</head>
+
+<body onload="fun1()">
+    <input type="text" id="txtName">
+    <script>
+       window.onload = function(){
+            init();
+        }
+        function fun1() {
+            alert("from Body");
+        }
+        function init() {
+            alert("Welcome");
+        }//you can see  i am getting welcome then i am not getting anything 
+        //why it is not calling my fun1()
+        //take this as a assignment do a little bit of reading 
+        //you need to know what is the difference between onload , why onload is not getting called when you specifying this window.onload
+
+        //when the window is getting loaded, so you can very clearly see my body events will not get fired Why read about that
+
+ 
+    </script>
+</body>
+
+</html>

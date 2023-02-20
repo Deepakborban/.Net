@@ -1,0 +1,55 @@
+<!-- how to remove there blocking ?
+there are many was to remove there blocking property  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid tomato;
+/* one of them is we can give there position to be absolute
+when ever you mention position to be absolute so my browser will never bother 
+about this particular css user agent stylesheet
+
+even thoe this is still a blocked element but now it will never bother the positioning 
+*/
+            position:absolute;
+        }
+
+/* now it is developers responsibility to fix this right and left */
+       
+        .d2{
+            top: 50px;         
+            left: 50px; 
+            background-color: aquamarine;
+        }                      
+/* by doing this we are moving them 50px from the top
+50px from the  left   */
+                       
+        .d3{                     
+            top: 100px;         
+            left: 100px;
+            background-color:pink;
+        } 
+/* 100px from the top 100px from the left */
+      
+
+/* but i want them to come in a single row */
+
+       
+        
+    </style>
+</head>
+<body>
+    <div class="d1">First</div>
+    <div class="d2">Second</div>
+    <div class="d3">Third</div>
+    
+</body>
+</html>

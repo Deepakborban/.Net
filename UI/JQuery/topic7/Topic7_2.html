@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Controls using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="css/basic.css" rel="stylesheet"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <style type="text/css" title="text/css">
+		form {
+			padding: 1em 0;
+		}
+		fieldset {
+			margin: 0 0 1em 0;
+		}
+		div {
+			float: left;
+			clear: both;
+			padding: 0 0 1em 0;
+		}
+		label {
+			float: left;
+			display: block;
+			width: 10em;
+			line-height: 1.5em;
+		}
+		input[type="text"] {
+			float: left;
+			display: block;
+			width: 10em;
+			line-height: 1.5em;
+		}
+	</style>
+        <script type="text/javascript">
+		// when the HTML DOM is ready
+		$(document).ready(function(){
+			// find the "sameAsShipping" checkbox and listen for the change event
+			$('#sameAsShipping').change(function(){
+				if( this.checked ){
+					// find all text inputs inside billingInfo, disable them, then cycle through each one
+					$('#billingInfo input:text').attr('disabled','disabled').each(function(i){
+			
+							// find the shipping input that corresponds to this billing input
+							var valueFromShippingInput = $('#shippingInfo input:text:eq('+i+')').val();
+							// set the billing value with the shipping text value
+							$(this).val( valueFromShippingInput );
+			
+					}); // close each()
+			
+				} else {
+					// find all text inputs inside billingInfo and enable them
+					$('#billingInfo input:text').removeAttr('disabled');
+				}
+			}).trigger('change');
+			
+			// find the shippingInfo text inputs and listen for the keyup and change event
+			$('#shippingInfo input:text').bind('keyup change',function(){
+			
+				// if "sameAsShipping" checkbox is checked
+				if ( $('#sameAsShipping:checked').length ){
+				
+					// find out what text input this is
+					var i = $('#shippingInfo input:text').index( this );
+					var valueFromShippingInput = $(this).val();
+					
+					$('#billingInfo input:text:eq('+i+')').val( valueFromShippingInput );
+				}
+				
+			}); // close bind()
+
+		}); // close ready()
+	</script>
+    </head>
+    <body>
+        
+	<div id="container">
+	<h1>Disabling and enabling form elements</h1>
+
+	<form action="">
+
+		<fieldset id="shippingInfo">
+			<legend>Shipping Address</legend>
+			<div>
+				<label for="shipName">Name</label>
+				<input name="shipName" id="shipName" type="text" />
+			</div>
+			<div>
+				<label for="shipAddress">Address</label>
+				<input name="shipAddress" id="shipAddress" type="text" />
+			</div>
+		</fieldset>
+
+		<fieldset id="billingInfo">
+			<legend>Billing Address</legend>
+			<div>
+				<label for="sameAsShipping">Same as Shipping</label>
+				<input name="sameAsShipping" id="sameAsShipping" type="checkbox" value="sameAsShipping" />
+			</div>
+			<div>
+				<label for="billName">Name</label>
+				<input name="billName" id="billName" type="text" />
+			</div>
+			<div>
+				<label for="billAddress">Address</label>
+				<input name="billAddress" id="billAddress" type="text" />
+			</div>
+		</fieldset>
+
+	</form>
+
+</div>
+    </body>
+</html>

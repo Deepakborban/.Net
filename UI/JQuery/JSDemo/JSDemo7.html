@@ -1,0 +1,47 @@
+<html>
+
+<head></head>
+
+<body>
+    <input type="text" name="" id="txtName" placeholder="Enter your Name">
+    <button onclick="printName()">Click me</button>
+
+
+<!-- i want to read some data from the textbox and print it on the screen or print it in a message 
+now there are few things which you have to remember 
+whenever you want to grab some data java script will allow us to get the data from the dom object  -->
+    <script>
+        function printName() {
+//now i need to get the object here so i'll say var nameobj = document........
+//there are many ways to do this but we will always go with document object
+//why document object because when you come back to browser and inspect and
+// i'll say document in console so you can see that the whole area get covered ,
+//so document get cover the whole area the complete screen
+//there are 2 most imp things which you should always remember
+//1 is document object 
+//2 nd is window object----------window is generalize to the complete window-------
+//like closing tab is a part of  window object changing the tab loosing afocus from one tab and getting the focus
+// of other tab is the part of window object
+// ------window.toolbar,  enabeling microphone , audio video all this is the part of toolbar
+//-------window.navigator.geolocation.latitude we have seen this in html5
+
+
+
+//document is related to the code which you seen on screen and window cover the whole screen 
+           // var nameObj = document.getElementById("txtName"); //this give you whole object
+            var nameValue = document.getElementById("txtName").value;  //this will give you only the value
+            //i got the value so now i can put it in the alert 
+            alert("welcome " + nameValue + " to java Script");
+        }
+    </script>
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<img style="display: block;" src="../js_images/7.PNG">
+
+</body>
+
+</html>

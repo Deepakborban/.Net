@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+            <style>
+             
+            div
+            {
+                width:100px;
+                background:red;
+                position:relative;
+                /* this is animation name  */
+                animation-name:myfirst;
+             /* this is time duration */
+                animation-duration:5s;
+                animation-timing-function:linear;
+                   /* this is initial delay so at the beggining when you see there will be delay of 2s it will not start immidiately*/
+                animation-delay:2s;
+                /* how many times it has to run -->infinite time so it will keep rotating like this it will never rotate  */
+                animation-iteration-count:infinite;
+                /* it will complete its path and then come back so direction is alternate */
+                animation-direction:alternate;
+                /* meaning what should happen means i want to play that informations so i have to keep running this */
+                animation-play-state:running;
+                /* Safari and Chrome: */
+                -webkit-animation-name:myfirst;
+                -webkit-animation-duration:5s;
+                -webkit-animation-timing-function:linear;
+                -webkit-animation-delay:2s;
+                -webkit-animation-iteration-count:infinite;
+                -webkit-animation-direction:alternate;
+                -webkit-animation-play-state:running;                
+                text-align: center;
+                padding: 50px 0;
+            }
+
+            @keyframes myfirst
+            {
+                /* in ex 1 we have seen from and to 
+                but here the same from and to   in ex 1st we are changing color from yellow to red
+                so suppose to change from yellow to red it take 1min = 60sec so i'll divide that 60sec into 4 slices 
+                so i'll take that 60sec and convert that to 100% then i name it that
+                 from 0 to 25% What i have to do 25 to 50% what i have to do  50 to 75 what i have to do  75 to 100 what i have to do */
+                 /* so at 0 it should be in red color and left:0px; top:0px;  */
+                0%   {background:red; left:0px; top:0px;}
+                /* now when it is 25 then apart from the color it wil move left to 200px and top 0 and change color from red to yellow */
+                25%  {background:yellow; left:200px; top:0px;}
+                /* at 50 color change from yellow to blue and from top it will move 200px */
+                50%  {background:blue; left:200px; top:200px;}
+                /* same for this  */
+                75%  {background:green; left:0px; top:200px;}
+                /* same for this     */
+                100% {background:red; left:0px; top:0px;}
+                
+            }
+
+            @-webkit-keyframes myfirst /* Safari and Chrome */
+            {
+                0%   {background:red; left:0px; top:0px;}
+                25%  {background:yellow; left:200px; top:0px;}
+                50%  {background:blue; left:200px; top:200px;}
+                75%  {background:green; left:0px; top:200px;}
+                100% {background:red; left:0px; top:0px;}
+            }
+            
+        </style>
+</head>
+<body>
+<div>Shashi</div>
+</body>
+</html>

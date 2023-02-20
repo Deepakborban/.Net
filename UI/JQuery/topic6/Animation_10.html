@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slide show</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+        <link type="text/css" href="css/style.css" rel="stylesheet"/>
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>    
+        <script type="text/javascript" src="js/jquery.slideshow.js"></script>  
+        
+        
+    </head>
+    <body>
+        <h1>Slide Show</h1>
+        <ul id="widget">
+		<li><img id="prev" src="imgs/prev.png" /></li>
+		<li><img id="slideshow" /></li>
+		<li><img id="next" src="imgs/next.png" /></li>
+	</ul>
+        <script type="text/javascript">
+            (function( $ ){
+		var $image = $('#slideshow');
+	
+		$image.slideshow({
+			images:['imgs/1.jpg', 'imgs/2.jpg', 'imgs/3.jpg', 'imgs/4.jpg'],
+			interval: 3000
+		});
+		
+		$('#prev').click(function(){
+			$image.trigger('prev');
+		});
+
+		$('#next').click(function(){
+			$image.trigger('next');
+		});
+		
+		$image.trigger('goto', 0); // Initialize in 0
+		$image.trigger('start'); // We want auto cycling
+
+	})( jQuery );
+        </script>
+    </body>
+</html>

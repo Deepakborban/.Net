@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: "Poppins", sans-serif;
+            background-color: #131313;
+
+        }
+
+        .profile-card {
+            width: 400px;
+            min-width: 250px;
+        }
+
+        .card-header {
+            background-color: #ff7a00;
+            background-image: linear-gradient(rgba(255, 122, 0, 0.9), rgba(255, 122, 0, 0.9)),
+                url("https://st.depositephotos.com/5240153/52108/v/450/depositephotos_521083828-stock-illustration-websitw-design-industry-concept-doodle.jpg");
+            background-size: 200px;
+            border-bottom: 5px solid #131313;
+            position: relative;
+            height: 165px;
+            padding: 0 20px;
+            box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header img {
+            max-width: 150px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+
+        }
+
+        .card-body {
+            background-color: #fff;
+            text-transform: capitalize;
+            text-align: center;
+            padding: 20px 30px;
+        }
+
+        .card-body h2 {
+            font-size: 32px;
+            margin-top: 64px;
+
+        }
+
+        .social-media-list {
+            margin: 30px 0 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-body .btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            padding: 16px 64px;
+            background-color: #ff7a00;
+            color: #fff;
+            border-radius: 100px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255, 122, 0, 0.2);
+        }
+
+        .social-media-list a:not(:last-child) {
+            margin-right: 28px;
+        }
+
+        .social-media-list a:hover {
+            color: #167edf;
+        }
+        .social-media-list a{
+        color: #565656;
+        font-size: 30px;
+        transition: color 0.3s;
+    }
+        .social-media-list {
+            margin: 25px 0;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-card">
+        <div class="card-header">
+            <img src="https://i.ibb.co/4mGD71h/scLogo.png" alt="profilr pic">
+        </div>
+        <div class="card-body">
+            <h2>Deepak Borban</h2>
+            <p>UI Developer</p>
+            <div class="social-media-list">
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <a href="#" class="btn">Hire Me</a>
+        </div>
+    </div>
+</body>
+
+</html>

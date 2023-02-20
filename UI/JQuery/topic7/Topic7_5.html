@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>(De)selecting all check boxes using a single toggle</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="css/basic.css" rel="stylesheet"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <style type="text/css" title="text/css">
+            form {
+                padding: 1em 0;
+            }
+            fieldset {
+                margin: 0 0 1em 0;
+                padding: 1em;
+                width: 30%;
+            }
+            label {
+                display: block;
+                width: 100%;
+            }
+            select {
+                width: 20em;
+                height: 7em;
+            }
+        </style>
+        <script type="text/javascript">
+            // when the HTML DOM is ready
+            $(document).ready(function(){
+                // find the "Remove Selected Color(s)" button
+                $('#remove').click(function(event){
+                    event.preventDefault();
+
+                    var $select = $('#colors');
+
+                    $('option:selected',$select).remove();
+                });
+
+                // find the "Add New Color" button
+                $('#add').click(function(event){
+                    event.preventDefault();
+
+                    var optionName = $('#newColorName').val();
+                    var optionValue = $('#newColorValue').val();
+				
+                    $('<option/>').attr('value',optionValue).text(optionName).appendTo('#colors');
+                });
+
+            }); // close ready()
+        </script>
+    </head>
+    <body>
+
+        <div id="container">
+            <h1>Adding and removing select options</h1>
+
+            <form action="">
+                <fieldset>
+                    <label for="colors">Colors</label>
+                    <select id="colors" multiple="multiple">
+                        <option>Black</options>
+                        <option>Blue</options>
+                        <option>Brown</options>
+                    </select>
+
+                    <button id="remove">Remove Selected Color(s)</button>
+                </fieldset>
+
+                <fieldset>
+                    <label for="newColorName">New Color Name</label>
+                    <input id="newColorName" type="text" />
+
+                    <label for="newColorValue">New Color Value</label>
+                    <input id="newColorValue" type="text" />
+
+                    <button id="add">Add New Color</button>
+                </fieldset>
+
+            </form>
+
+        </div>
+    </body>
+</html>

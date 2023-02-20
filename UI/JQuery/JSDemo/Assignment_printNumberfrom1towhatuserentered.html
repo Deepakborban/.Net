@@ -1,0 +1,89 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" name="" id="txtNumber" placeholder="Enter the">
+        <button onclick="generateNumbers()" id="btnNumber">Generate Numbers</button><br>
+        <label for="" id="lblMsg"></label>
+        <!--loops are those set of statements which are use to execute statements again and again till a given condition is true  -->
+        <!-- we have only two types of loop  -->
+        <!--1. entry ristricted loop 
+                    -------while loop
+                    -------for loop-->
+                    <!-- here condition is checked at the beggining -->
+                    <!-- if the condition is false here so the loop will never be executed  -->
+
+
+        <!-- 2. exist ristricted loop
+                    -------do while loop-->
+                    <!-- here condition is checked at the end  -->
+                    <!-- but here if the condition is false the loop will still execute once  -->
+        <!--  entry ristricted loop -------- before entering the loop you are checking for the condition--> 
+        <!-- for example :- you go to threater so without ticket can you enter to the threater hall----not possible 
+                            without having air ticket can you be in flight --not possible so ticket becomes important for you 
+                            without ticket you cant enter so that is entry ristricted   -->
+
+
+        <!-- exit ristricted meaning while entering you are not checked but while comming out you will be checked 
+        for example :- while entering in a rail no body will ask you for the ticket but while comming out you can be caught for the ticket -->
+
+
+    
+        <!-- weather you write entry ristricted code or exit ristricted code what is the most important thing you should always remember 
+            1. initialization
+            2. condition checking
+            3. increment or decrement  -->
+        <script>
+            // function generateNumbers(){
+            //     let cnt = 1;
+            //     let str = "";
+            //     while(cnt <= 10){
+            //         str = str + "," + cnt;
+            //         cnt++; 
+            //     }
+            //     var lblMsjObj = document.getElementById("lblMsg");
+            //     lblMsjObj.innerHTML = str; //here output  = ,1,2,3,4,5,6,7,8,9,10
+            // }
+
+
+
+            // function generateNumbers(){
+            //     let cnt = 11;
+            //     let str = "";
+            //     while(cnt <= 10){
+            //         str = str + "," + cnt;
+            //         cnt++; 
+            //     }
+            //     var lblMsjObj = document.getElementById("lblMsg");
+            //     lblMsjObj.innerHTML = str; //here we dont have any output because the condition is false 
+            // }
+
+
+
+            // function generateNumbers(){
+            //     let cnt = 11;
+            //     let str = "";
+            //    do{
+            //         str = str + "," + cnt;
+            //         cnt++; 
+            //     } while(cnt <= 10);
+            //     var lblMsjObj = document.getElementById("lblMsg");
+            //     lblMsjObj.innerHTML = str; //here the output is = ,11 because do while will check the condition after executing once 
+            // }
+
+
+
+
+
+
+            //the most easiest way of handeling numbers is always using for 
+            function generateNumbers(){
+                let str = "";
+                for(let i=1; i<=10; i++){
+                    str = str + "," + i;
+                }
+                var lblMsjObj = document.getElementById("lblMsg");
+                lblMsjObj.innerHTML = str;//output = ,1,2,3,4,5,6,7,8,9,10
+            }
+        </script>
+    </body>
+</html>

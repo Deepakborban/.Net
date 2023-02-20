@@ -1,0 +1,103 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function getData() {
+            //imagine i have reading the data from the inputs 
+            let name = "Deepak";
+            let mark1 = 30;
+            let mark2 = 40;
+            let mark3 = 50;
+            //and i want to calculate the total and the result 
+            //so ho do we do that 
+            //but we know that we should not mix the ui code with the process code 
+            let result = calculateResult(mark1, mark2, mark3);
+            printResult(result);
+        }
+
+        function calculateResult(mark1, mark2, mark3) {
+            return (mark1 + mark2 + mark3);
+        }
+
+        function printResult(result) {
+            alert(result);
+        }
+        //now imagine tommorow bussiness will grow and they will say add one more   mark then i have to 
+        //come back to calculateResult method and modify there also
+        //after some time bussiness will come back with some other requirementthey will say add one more mark mark5
+        //then again we have to come every where and make changes 
+
+        //so in object oriented world what we do we will wrap all this information in a object
+        //and we wil not pass this like mark1, mark2, mark3.......
+
+        //so here java script also wrap all this information in form of a object 
+
+
+        //how can we do this  
+
+
+        function getStudentData() {
+            //we create a variable student and inside this put every thing in a key and value pair
+
+
+
+
+            // let student = {
+            //     name: "Deepak",
+            //     mark1: 30,
+            //     mark2: 40,
+            //     mark3: 5
+            // };
+
+
+
+
+            //now  i get the whole object  ,so i can take this object and instead of me logging it i can pass this whole object to 
+            //calculateStudentResult() so in the calculate i can say student.name   student.mark1   student.mar2...................
+            //and we can fetch the particular value 
+
+
+           // console.log('name' + student.name);//like this we can fetch the data
+          //  console.log(student);
+
+            //Remember in JSON whenever you want to create a object you have  to open a flower bracket and close it 
+
+            //so in programming world how will you store the data mark1 mark2....will i store it in seprate variable or we put it in container
+            //------we can put them inside array
+            //why should i put them inside array----if you store it in array so it will be easy to store and fetch the data 
+            //so fetching and storing will be easy for us 
+            //so thats a reason we usually put them inside the array   
+
+
+            let student = {
+                name: "Deepak",
+                marks: [30, 40, 50]   //remember whenever you want to put a particular array you should always put it inside a square brackets
+            };
+            console.log(student);
+            //now how will i access mark1
+            console.log('Mark1  ' + student.marks[0]);
+
+
+
+
+
+            // let result = calculateResult(mark1,mark2,mark3);
+            // printResult(result);
+        }
+
+        function calculateStudentResult(mark1, mark2, mark3) {
+            return (mark1 + mark2 + mark3);
+        }
+
+        function printStudentResult(result) {
+            alert(result);
+        }
+
+        //lets call getStudentData() directly
+        getStudentData();
+    </script>
+</body>
+
+</html>

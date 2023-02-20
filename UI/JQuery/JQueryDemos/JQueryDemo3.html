@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <style>
+        .msg{
+            width: 150px;
+            height: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            box-shadow: 2px 2px 2px #333;
+            /* when i move my mouse pointer her i should get a thumbnail */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button onclick="printMessage()">Print Message </button> -->
+
+    <!-- now to make my button to work, i have to write onclick here -->
+     <!-- <div class="msg" onclick="printMessage()">print message</div> -->
+
+     <div class="msg">print message</div>
+
+
+<!-- look at this i am merging my UI code with some other aditional information which is very bad , So i am merging my UI code with
+the event code/script code 
+so can we with a particular code which will segrigate which will make sure my UI code is not at all getting merged with my html
+meaning i dont want any one to write onclick.....in div 
+Can we do something like that so that my html code is completely seprate and my script code is completely seprate  they are not at all merged
+remember i am a UI designer here when you talk about ui we have 2 different type of people who will be comming here 
+1. UI Designer
+2. UI Developer
+developer will sit and write this JavaScript code 
+designers job is to get  the template creating UI getting that gradient colors when user moves cursor in it .....
+now when you are wearing the hat of a ui developer so i will consentrate only on developnment , i will not go to designing 
+
+but now we have merged every thing when i say i am a UI developer you have to do both the jobs you cant say you know what i can understand only
+java script i cannot understand HTML -->
+    <script>
+        //   SO when you work with JQUERY What we usually do is we will gone to specify the same kind of code when ever the
+        // document object is ready or whenever the window is ready thats where we start writting some of the code 
+
+        //so when the document is ready so usually we write a function like this 
+        function init() {
+        }
+        //when my document object is ready, thats what we have written in previous code in body onload, so i dont want to write all this 
+        //code i want to write it seprately so you can write all those things in this script
+        //so, we will differenciate ,we will segrigate the UI code with the script code we will not merge the ui code with the script code 
+
+        //what does it mean 
+        //for ex:- on a particular button  i want to print a particular message like Print message 
+        //now imagine that its a very simple appication 
+        //and when user clicks on this i want to get a alert 
+        //so in the button we have to mention onclick
+        function printMessage() {
+            alert("Welcome");
+        }
+        //so this is what we do 
+        //but what happens here ,imagine that we have lot of css and html, so now my client will say deepak you kow what,
+        //this button is not looking good can you change the style of it 
+        //so instead of writing this button i will put a div here 
+
+
+    </script>
+</body>
+
+</html>

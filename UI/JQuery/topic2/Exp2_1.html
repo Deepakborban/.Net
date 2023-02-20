@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Selecting Child Element using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <div>Category</div>
+        <ul id="nav">
+            <li><a href="#anchor1">Anchor 1</a></li>
+            <li><a href="#anchor2">Anchor 2</a></li>
+            <li><a href="#anchor3">Anchor 3</a></li>
+        </ul>
+        <script type="text/javascript">
+            // we have id with the name nav which has a li and li has a child as a  > this symbol says thats its a child 
+            //so we are saying nav has a li has a a and when it is clicked then this function should called 
+            jQuery('#nav li>a').click(function(){
+                console.log(this);//what is this represent here----------this represent the current object 
+                alert(this.text); //so this alert will print text inside the current object
+            });
+        </script>
+    </body>
+</html>

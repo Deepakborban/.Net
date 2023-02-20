@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" name="" id="txtName" placeholder="Enter Name">
+        <br>
+        <button id="btnAdd" onclick="addName()">Add Name</button>
+        <button id="btnAdd" onclick="getData()">Get Name</button>
+
+        <br><br>
+        <ol id="namesList">
+            <!-- <li>asdh</li> -->
+        </ol>
+        <!-- as soon as user adds it  i want to get a list here and in the list i want to show all the names what user have added  -->
+         <script>
+             var names = new Array();
+
+             function addName(){
+                
+                let name = document.getElementById("txtName").value;
+                names.push(name);
+                document.getElementById("txtName").value = '';
+                document.getElementById("txtName").focus();
+                
+
+                
+             }
+
+             function getData(){
+                 let namesListObj = document.getElementById("namesList");
+                 //to put data in ol we need to put list index <li>so create a variable
+                 let listStr = '';
+                //so to get data from the array we use for loop
+                for(let i=0 ; i<names.length; i++){
+                    listStr = listStr + '<li>' + names[i] + '</li>'
+                }
+                namesListObj.innerHTML = listStr;
+             }
+             //but here problem is when i append new data its reloading every thing 
+             //but i should not refresh the whole array or create a whole new array it should append data in the new one only
+             //so it is bad code because of performance
+             
+             //so this loop whatever we are using here is good in the UI part but for performance it is very bad so you should think of something
+             //which will increase the performance of our code 
+         </script>
+    </body> 
+</html>

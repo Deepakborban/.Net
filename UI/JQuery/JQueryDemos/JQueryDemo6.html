@@ -1,0 +1,35 @@
+<html>
+
+<head></head>
+
+<body>
+    <img src="../js_images/80" alt="">
+    <p>look at here we have writing here init code and this will be called by window.load why are we doing this
+        --------to write my initialization code something like attaching my events , eventbinding , doing some kind of
+        initialization and this should be called when the window gets loaded now i want to write the equilent code in
+        JQuery</p>
+    <script src="../lib/jquery-3.6.0.min.js">//1st make sure that you include the script file below that you write a script not above</script>
+    <script>
+        //this ready is equilent of me writing window.onload
+         $(document).ready(function(){
+             //this will be my call back you can either write any fuction name or you can write any content here
+             console.log("Welcome from ready function");
+         })
+         //you can write function like this 
+         //              or
+         //you can write like this 
+         $(document).ready(getMsg);
+         //so get message is a function callback
+         function getMsg(){
+            console.log('Deepak');
+         }
+
+
+         //you can also write 
+        //  $(function(){
+        //      alert('Welcome from jquery');
+        //  })
+    </script>
+</body>
+
+</html>

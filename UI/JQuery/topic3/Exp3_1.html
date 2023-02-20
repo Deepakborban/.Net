@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Looping elements using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+        <style type="text/css">
+            .even{
+                background: #333;
+                color: #fff;
+            }
+            .odd{
+                background: #6666ff;
+                color: #fff;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <h2>Family Members</h2>
+        <ul>
+            <li>Shasi</li>
+            <li>Shiva</li>
+            <li>Shankar</li>
+            <li>Ravi</li>
+            <li>Raju</li>
+        </ul>
+        <!-- when ever you want to write foreach loop in jquery you have to specify in this particular way 
+        you have to say $(array or a container or a collection).each(which will take a particular function(here you can pass index, data and you can decide what ever you feel like) ) -->
+        <script type="text/javascript">
+            //syntax of foreach loop
+            // $(array).ready(function(index,data){})
+            $(document).ready(function() {
+                $("ul > li").each(function(i) {//here we are iterating all the list index and checking if index value % 2 ==1 means odd then apply css of odd class and if it is even then apply even css
+                if (i % 2 == 1)
+                {
+                    $(this).addClass("odd");
+                }
+                else
+                {
+                    $(this).addClass("even");
+                }
+                });
+            });                 
+            
+        </script>
+    </body>
+</html>

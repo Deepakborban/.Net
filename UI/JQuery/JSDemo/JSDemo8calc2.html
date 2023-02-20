@@ -1,0 +1,108 @@
+<html>
+
+<head></head>
+
+<body>
+    <input type="text" name="" id="txtNo1" placeholder="Enter 1st number"><br>
+    <input type="text" name="" id="txtNo2" placeholder="Enter 2nd number"><br>
+    <label for="" id="lblResult"></label> <br><br>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">X</button>
+    <button onclick="calculate('/')">/</button>
+    <!-- you can think how much of repeated code you can reduce here  -->
+    <script>
+        //this is the controller
+        function calculate(oper) {
+            var no1 = parseInt(document.getElementById("txtNo1").value);
+            var no2 = parseInt(document.getElementById("txtNo2").value);
+            var result = 0;
+            if (oper == '+') {
+                result = add(no1, no2);
+                // alert('Sum of number is :' + result);
+            }
+            else if (oper == '-') {
+                result = sub(no1, no2);
+               // alert('Subtract of number is :' + result);
+            }
+            else if (oper == '*') {
+                result = mul(no1, no2);
+               // alert('Product of number is :' + result);
+            }
+            else if (oper == '/') {
+                result = div(no1, no2);
+                //alert('Division of number is :' + result);
+            }
+            //there are many ways to give result as output as console as alert 
+            //console.log('Result is :' + result);
+            //but alert is not a good way to print information on the screen 
+            //alert('Result is :' + result);
+
+
+
+            //so bussiness will say in place of alert rather we can put a label
+            //so today i  put label tommorow they say put it in div and give a fancy stuff day after tommorow they may say
+            //put some where so now we are written every thing in a same file so it is easy i can come back here and i can modify 
+            //but imagine you are writting a very big and complex project where you are writting a particular process and with that 
+            //you have multiple files which handle multiplication , addition, subtraction and division these are 4 different file 
+            //so the complexity of code increases 
+
+            //so when i come back here so if the output code is the part of controller so it will always be problematic 
+
+            //like you are giving the order to server guy and he go take the food from chef and serve you 
+            //so he is doing multiple jobs there like he is serving you + doing cleaning job also but cleaning is not his job
+            // like that printing the outputis not the job calculate function
+            //So this output part should not be the part of this calculate method 
+
+            //so i remove this and call printResult(result) function and i pass this result as a parameter
+
+            printResult(result);
+            //now look at this code this is purely doing process job it is not having process related code it is not having output related code 
+            //so tommorow if i want to change something related to output so i will be knowing ok this particulr code is written in this file 
+            //so i go to that particular file and just modify that 
+             
+
+
+        }
+        //output
+        //if they say change the way to print result so i will not touch this code i will only touch the output related code
+        function printResult(result)
+        {
+            //to print in console
+           // console.log('Result is :' + result);
+
+            //to print as a alert
+           // alert('Result is :' + result);
+
+            //to print in label 
+            var lblResult = document.getElementById("lblResult");//so i get the whole object
+            //if it is a text box so we say document.getElementById("txtNo2").value;  so .value will get you the value 
+            //in the same way if you want to get the data from the label or if you want to print some data into the label
+            //so label has a property called --------------innerText or innerHtml
+            //lblResult.innerText = "Result is " + result;
+            
+            //i want to display Result is in bold so to bold any thing in html we use b tag right
+           // lblResult.innerText = "<b>Result is </b>" + result; // here it is treating everything as a text but <b>is not a text right its a html tag
+            //so  i want to treat that as a html tag so if the output has any html content we cant use innertext
+            //there we use ------------------innerHtml------------------------
+            lblResult.innerHTML = "<b> Result is : </b>" + result;
+
+        }
+        // if they say to change the logic to add 2 no so i come here and modify this function only  
+        function add(no1, no2) {
+            return no1 + no2;
+        }
+        function sub(no1, no2) {
+            return no1 - no2;
+        }
+        function mul(no1, no2) {
+            return no1 * no2;
+        }
+        function div(no1, no2) {
+            return no1 / no2;
+        }
+    </script>
+
+</body>
+
+</html>

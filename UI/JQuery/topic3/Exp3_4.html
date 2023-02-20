@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slide animation using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+        <script type="text/javascript" src="../js/jquery.cycle.all.min.js"></script>
+        <!-- this is addition file which we have , which is used for animation -->
+        <style type="text/css">
+            .pics {
+                height: 232px;
+                width: 232px;
+                padding: 0;
+                margin: 0;
+            }
+            .pics img {
+                padding: 15px;
+                border: 1px solid #ccc;
+                background-color: #eee;
+                width: 200px;
+                height: 200px;
+                top: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <div class="pics">
+            <img src="../images/img1.jpg" width="200" height="200" alt="Beach 1" />
+            <img src="../images/img2.jpg" width="200" height="200" alt="Beach 2" />            
+        </div>
+
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $('.pics').cycle('fade');//.cicle is the function from cycle.all.min.js
+                //fade is the effect what we are giving 
+            });                      
+            
+        </script>
+    </body>
+</html>

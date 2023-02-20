@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <style>
+        #div1 {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+//so in the drag event what i am doing , i am tracking which is the controll there may be multipe controlls na 
+//we may have multiple images so i should know which is the image which user is trying to drag so that like when somebody drops it here 
+// i can capture the id of that and i can get the particular object inside it here 
+        function drag(ev) {
+            //so to do that i am recording it here 
+            //ev is the event what we are passing event is the object i am capturing that event object 
+            //from event object we have a property called datatransfer so in that property we are setting the key and value 
+            //text is the key and ev.target.id is the value 
+            //so it will set the id of the draged image so id of the draged image is drag1 
+            //so drag1 we be stored with the event object 
+            //now my event object has the id stored in it 
+            //drag = click event + move event
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+// now drop event means releasing the mouse  
+//while droping i'll take the event object now previously the event object is already has the id   
+// in draging i'll say set , in droping i'll say get , get this particular key ,so in var data i get the object
+
+        function drop(ev) {
+            // this is imp -->preventDefault
+            //usually what happens when i don't want a particular event/ the default event of the controll to get executed 
+            //for example:-in the form we have a submit button here when you click on submit button what will happen -->it will submit to action which we have passed
+            //but if i don't want this event to be fired / i dont want this form to be submitted 
+            //so what i can do is , i can run this prevent default for that submit 
+            // meaning even thoe you clicked on that submit buttom the form will not submit 
+            //so where can we use this where is the place where you are clicking on the button but still you are not submitting the form 
+            //--------->may be this can be written whereever you are writing personalize javascript 
+            //usually what happens whenever you are writing personalize java script you may write a personalize message here like please enter this name 
+            // please enter this password ,you would have written a validation code for the javascript when user clicks on ok to this popup til the form get submitted
+            //at that time we use preventDefault 
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            //to that particular object  the target event value will be this one div  so appendchild to this 
+            // what is the child object so i'll say document.getElementById(data)
+            //what is there in the data --------------> it has teh id of the object which we have dragged 
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <p>Drag the W3Schools image into the rectangle:</p>
+<!-- here we have a div and a image initailly div is empty and when you drag and drop 
+    the the image in div then you have a div containing image -->
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <!-- so i have to allow the user to drag this image and allow user to drop in the div  -->
+    <!-- so we are enabeling draggable here  ondragstart so when user start dragging what i have to do so ondragstart iam calling the deag event
+     -->
+    <img id="drag1" src="../images/1.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+</body>
+
+</html>

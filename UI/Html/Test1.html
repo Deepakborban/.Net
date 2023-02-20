@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- we need to pass data from this page to test2.html so just put that in form  or else you have document.location.href = "Test2.html"-->
+
+    <label>Enter user Name :</label>
+    <input placeholder="Enter user name " type="text" id="txtName">
+    <br>
+    <label>Enter Password</label>
+    <input placeholder="Enter password " type="password" id="txtPwd">
+    <br>
+    <button id="btnSubmit" onclick="storedata()">Login</button>
+    <script>
+        function storedata(){
+            // alert("welcome");
+            // i dont want the whole object thats why i user .value i only want the value
+            var name = document.getElementById("txtName").value;
+            //i got the name 
+            // how will i store this to my local storage ----->localstorage.setname()
+            if(localStorage !== 'undefined')
+            {
+                localStorage.setItem('username', name);
+                //from this line my data will be stored in local storage
+
+                document.location.href = "Test2.html"
+            }
+        }
+    </script>
+</body>
+</html>

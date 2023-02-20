@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Searching elements and changing the css using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+        <style type="text/css">
+            .even{
+                background: #333;
+                color: #fff;
+            }
+            .other{
+                background: #6666ff;
+                color: #fff;
+            }
+            .boy{
+                background: #ff3333;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <span>Hello young Boy !!!</span>
+        <span>Hello Smarty !!!</span>
+        <span>Boy, whats the matter...</span>
+        <div>Hai boy, Whats your name ?</div>
+        
+        <script type="text/javascript">
+            jQuery('span:contains("Smarty")').addClass('even');//here based on content we are changing the css of it 
+                                                            // i am going with thw span, in the span if it contains smarty for that particular span i am adding a class called 'even'
+                                                            //even has background 333  and color as fff
+            jQuery('div:contains("name")').addClass('other');// if the div contains name so apply css other   
+            jQuery('span:contains("Boy")').addClass('boy');
+        </script>
+    </body>
+</html>

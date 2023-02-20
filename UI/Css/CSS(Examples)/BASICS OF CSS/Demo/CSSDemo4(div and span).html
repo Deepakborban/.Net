@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+<!-- Whatis div?
+-----------so div is a blocked container
+when ever you create a particular div we are creating here 
+will gone to block the whole row -->
+<!-- what do you mean by that? (blocking the whole row)
+======so to understand this i create a paragraph -->
+<!-- and below that i wrote a line -->
+
+    <p>This is p1</p> This is outside the p1   
+<!-- this is outside the p1 output me next line me print hoga 
+kyu?
+paragraph to chota sa hai to usi line me print hona chahiye
+-------because this elements are blocked elements
+when you inspect element and see user agent stylesheet 
+it says display:block; 
+meaning ------it will block the whole row 
+irrespective weather you write a  . or you write a whole line dosent matter
+-->
+
+<!-- same as your div so div are also blocked element  -->
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+
+<!-- but instead of div or p if you write <span> -->
+    <span>This is p1</span> this is outside p1
+<!-- now this particular content comming next to it because is not a blocked element 
+if we want to block our span so inside css we can write 
+
+display:block; -->
+
+</body>
+</html>

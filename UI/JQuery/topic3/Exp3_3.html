@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clicked div with its index number using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+        <style type="text/css">
+            div{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <div>click me</div>
+        <div class="test">test</div>
+        <div>click me</div>
+
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $("div").click(function() {
+                    alert("You clicked on div with an index of " +
+                        $("div").index(this));//it will show me the index of the object 
+                });
+            });                      
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head></head>
+ 
+    <body>
+      <input type="text" name="" id="txt" 
+      onblur="blurEvent()" 
+      onchange="changed()"
+      onfocus="focused()"
+      oninput="input()"
+      onclick="clicked()"
+      onkeydown="keyDown()"
+      onkeypress="keyPressed()"
+      onkeyup="keyup()"
+
+      >
+        <label for="" id="lblMsg"></label>
+
+        <script>
+            var lblMsgObj = document.getElementById("lblMsg");
+            function blurEvent(){//called when the focus go out or you lost the focus 
+                lblMsgObj.innerHTML = "Blur Called";
+            }
+            function changed(){
+                lblMsgObj.innerHTML = "Changed called";
+            }
+            function focused(){
+                lblMsgObj.innerHTML = "Got focus";
+            }
+            function input(){
+                lblMsgObj.innerHTML = "Input Called";
+            }
+            function clicked(){
+                lblMsgObj.innerHTML = "Clicked";
+            }
+            //find the difference between onkeypressed and onkey down ,onkeyup, oninput
+            //execute them seprately go to w3scholls and try to find out the difference
+
+
+            //this(keyDown, Keypressed, keup) are keyboard events 
+            function keyDown(){
+                lblMsgObj.innerHTML = "key down";
+            } 
+            //key pressed may be used where we have to validate on every key press like 
+            //suppose we have a input for email so below that input there should be a label so till the user wont enter valid email it should give message like invalid email
+            //so while user is typing something i should keep monitoring like weather the email what user entered is proper or not 
+            // something like when you enter the password you might have seen this like weather the password is strong/weak like that 
+            //so for that these events are important     
+            function keyPressed(){
+                lblMsgObj.innerHTML = "key pressed";
+            }   
+            function keyup(){
+                lblMsgObj.innerHTML = "key up";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Example3.aspx.cs" Inherits="CSS3Demos.Animation.Example3" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style> 
+            div
+            {
+                width:100px;
+                height:100px;
+                background:yellow;
+                transition:width 2s;
+                -webkit-transition:width 2s; /* Safari */
+            }
+
+            div:hover
+            {
+                width:300px;
+            }
+            #animate
+            {
+                width:100px;
+                height:100px;
+                background:red;
+                transition:width 2s, height 2s;
+                -webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari */
+            }
+
+            #animate:hover
+            {
+                width:200px;
+                height:200px;
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg); /* Safari */
+            }
+
+        </style>
+</head>
+<body>
+        <div> This is the second article.  These articles could be blog posts, etc.  </div>
+        <div id="animate"> This is the second article.  These articles could be blog posts, etc.  </div>
+    </body>
+</html>

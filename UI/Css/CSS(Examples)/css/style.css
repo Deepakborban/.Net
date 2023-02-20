@@ -1,0 +1,23 @@
+/* so inside this folder i'll gone to create the style or gone to write that particular code  */
+p{
+    /* color changes the text color */
+    color:yellow !important; 
+    /* font-family changes the font */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* for the same para or element we can write multiple styles also */
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* we use border to get border outside the element inthis case paragraph
+    1px 2px 3 4 5 .....define the boldness of border  */
+    border: 1px  #322323;
+    /* yaaha bhi color likh diya to yaha wala apply hoga  kyuki ye baad me likha hai*/
+    /* par agar upar wala hi apply karna hai kahi or ka nahi to uske aage------ !important ------likh do */
+    color: green;
+}
+
+/* now how to use this particular .css file in our .html file 
+so we link this page on the pages where we want to apply this css */
+
+/* for this in head section just write
+<link rel="stylesheet" href="here just specify the css file path just like what we have did with imgaes " >   */

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example8 | To clone element a using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <ul>
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+            <li>Link 4</li>
+            <li>Link 5</li>
+        </ul>
+        <p>this paragraph is after unordered list</p>
+        <div id="cln"></div>
+        <p>this is last line in this body</p>
+        <script type="text/javascript">
+        jQuery('ul').clone().appendTo('body');          //means i am cloning my unordered list , where to append
+                                                                //---in the body so it will append this in the end of the body
+            
+       // jQuery('ul').clone().appendTo('#cln');        //means i am cloning my unordered list , where to append
+                                                                //---in the div who's id is provided
+        </script>
+    </body>
+</html>

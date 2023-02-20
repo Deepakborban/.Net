@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- i want to add some new font so i go to google fonts copy the link of font you want to apply and paste it here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Hurricane&family=Poppins&display=swap"
+        rel="stylesheet">
+        <!-- or you can import the font  -->
+    <style>      
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Hurricane&family=Poppins&display=swap');
+    </style>
+
+      
+    <style>
+        #goodNews {
+            position: relative;
+            width: 250px;
+            height: 300px;
+            left: 200px;
+            top: 80px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            /* copy font name and paste it here */
+            font-family: 'Cinzel Decorative', cursive;
+            font-family: 'Hurricane', cursive;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        legend {
+            border: 2px solid #333;
+            border-radius: 12px;
+            padding: 5px;
+        }
+        div{
+            font-family: 'Cinzel Decorative', cursive;
+            font-family: 'Hurricane', cursive;
+            font-family: 'Poppins', sans-serif;
+        }
+        @font-face {
+            font-family: 'Deepak'; 
+            src:url(font/Poppins-Italic.ttf) format('tff');
+        }
+        .text{
+            text-shadow: 5px 5px 5px black; /*here 1st parameter is saying that from where the light is falling in x-axis
+            and 2st parameter is saying that from where the light is falling in y-axis
+            and the 3rd parameter is spread or blur effect*/
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            box-shadow: 5px 5px 5px black; 
+            border: 3px solid rgb(185, 175, 175);
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset id="goodNews">
+        <legend>Good News</legend>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+    </fieldset>
+    <br><br><br><br><br><br><br><br><br><br>
+    <p>Can you see it has downloaded a file woff2 </p>
+    <img src="./images/1.PNG" alt="">
+    <p>now apply font in a div</p>
+    <div>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+    </div>
+    <p>Difference between import  and link fonts and your own font, which is the prefered way</p>
+
+
+    <div style="font-family:'Deepak';" >
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+        <p>this is good</p>
+    </div>
+
+    <div class="text" >
+        <h1>this is good</h1>
+    </div>
+
+    <div class="box"></div>
+
+     <hr color="red" width="50%" style="height: 10px;;">
+</body>
+
+</html>

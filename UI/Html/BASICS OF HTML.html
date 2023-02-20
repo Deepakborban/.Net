@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Of Html</title>
+    <style>
+        h2 {
+            color: red;
+        }
+
+        h1 {
+            color: rgb(2, 25, 46);
+        }
+
+        /* this is to make the page in dark mode */
+        html {
+            font-size: 62.5%;
+            filter: invert(1) hue-rotate(180deg);
+        }
+
+        /* But this will also apply on all the image , so use the the same line inside img selector to reverse the effect */
+        img {
+            filter: invert(1) hue-rotate(180deg);
+
+        }   
+
+        /* also make sure to use background color in body  */
+        body {
+            font-size: 18px;
+            font-family: "Rubik", sans-serif;
+            background-color: #fff;
+        }
+
+        img {
+            display: block;
+        }
+
+        .help {
+            width: 80px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: red;
+            color: white;
+            position: fixed;
+            right: 20px;
+            top: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  this is fixed help button -->
+    <div class="help">Help</div>
+    <!-- TO Create a div with class c1
+    just write  .c1   and press enter -->
+    <div class="c1"></div>
+
+    <!-- I want to create a div with class c1 and inside this i want to create a one more div with class c2  and inside this i want to create a anchor tag
+    so just write   .c1>.c2>a        and press enter-->
+    <div class="c1">
+        <div class="c2">
+            <a href=""></a>
+        </div>
+    </div>
+
+    <!-- Heading  -->
+    <h1>Welcome h1 tag</h1>
+    <h2>Welcome h2 tag</h2>
+    <h3>Welcome h3 tag</h3>
+    <h4>Welcome h4 tag</h4>
+    <h5>Welcome h5 tag</h5>
+    <h6>Welcome h6 tag</h6>
+
+    <!-- Paragraph tag -->
+    <h2>Example of paragraph tag </h2>
+    <p>The ‘Proof of Investment’ (POI) link on e-Payroll for ‘All Mphasis India Entities’ has been enabled from November
+        29th , 2021. The window will be open only till January 03rd, 2022.Request you to kindly submit the POI within
+        the specified time and avoid waiting till the last day. There willbe no extension in the date for submission of
+        proofs this year. Kindly submit one POI instead of multiple POI’s. In case, some proofs could not be submitted
+        before January03rd, 2022, the window for submission of additional investment proofs will be opened again in
+        February 2022. Thetimelines will be communicated in January 2022. Please note that proof details submitted
+        during this periodSHOULD NOT be resubmitted in February 2022. Employees are requested to retain originals of all
+        the documents for future internal and external verification.
+
+
+        <!-- Bold tag -->
+    <h2>Example of bold tag </h2>
+    <b>This is inside the b tag</b>, please raise a ‘Trouble Ticket’ in E-Payroll and we will respond in 3 working
+    days.
+    Regards,
+
+
+    <!-- strong tag -->
+    <h2>Example of strong tag </h2>
+    <strong>This is inside the Strong tag</strong>
+    </p>
+
+    <!-- b tag-----i tag------u tag -->
+    <h2>Example of b, i, u tag </h2>
+    <p>
+        <b><i><u>this is bold italic and underline</u></i></b>
+    </p>
+
+
+    <!-- sub tag -->
+    <h2>Example of sub tag </h2>
+    H<sub>2</sub>O
+
+    <!-- &nbsp; use to put space -->
+    &nbsp;
+
+
+    <!-- br tag use to break the line  -->
+    <br>
+
+    <!-- sup tag -->
+    <h2>Example of sup tag </h2>
+
+    (a+b)<sup>2</sup> + b<sup>2</sup> + 2ab
+
+    <!-- del tag use to strike out  -->
+    <h2>Example of del tag </h2>
+    <del>Example of del tag</del>
+
+    <!-- ins tag is use to under line it is similar to u tag -->
+    <h2>Example of ins tag </h2>
+    <ins>Example ofins tag</ins>
+
+    <!--when you write something in p tag so when you resize yor windows screen
+        so your browser has this ability to change line or adjust the text on next line  -->
+    <!-- But to override this behaviour of browser we have pre tag -->
+    <h2>Example of pre tag </h2>
+    <pre>The ‘Proof of Investment’ (POI) link on e-Payroll for ‘All Mphasis India Entities’ has been enabled from November 29th , 2021. The window will be open only till January 03rd, 2022.Request you to kindly submit the POI within the specified time and avoid waiting till the last day. There willbe no extension in the date for submission of proofs this year. Kindly submit one POI instead of multiple POI’s. In case, some proofs could not be submitted before January03rd, 2022, the window for submission of additional investment proofs will be opened again in February 2022. Thetimelines will be communicated in January 2022. Please note that proof details submitted during this periodSHOULD NOT be resubmitted in February 2022. Employees are requested to retain originals of all the documents for future internal and external verification.
+    </pre>
+
+
+    <h2>Ordered List</h2>
+    <h3>Name of Friends</h3>
+    <!-- By default list starts with 1 2 3 4 .......... -->
+    <ol>
+        <li>Deepesh</li>
+        <li>Gourav</li>
+        <li>Mrunali</li>
+        <li>Lipsa</li>
+        <li>Anusha</li>
+    </ol>
+    <!-- instead of 1 2 3 4 ......i want roman number so just write type="i" -->
+    <ol type="i">
+        <li>Deepesh</li>
+        <li>Gourav</li>
+        <li>Mrunali</li>
+        <li>Lipsa</li>
+        <li>Anusha</li>
+    </ol>
+    <!-- instead of roman i  want a b c d ....... -->
+    <ol type="a">
+        <li>Deepesh</li>
+        <li>Gourav</li>
+        <li>Mrunali</li>
+        <li>Lipsa</li>
+        <li>Anusha</li>
+    </ol>
+    <!-- instead of a b c d ....i want A B C D..... -->
+    <ol type="A">
+        <li>Deepesh</li>
+        <li>Gourav</li>
+        <li>Mrunali</li>
+        <li>Lipsa</li>
+        <li>Anusha</li>
+    </ol>
+    <!-- list by default starts from 1 and i want it to be start from 5  so just write start="5"-->
+    <ol type="1" start="5">
+        <li>Deepesh</li>
+        <li>Gourav</li>
+        <li>Mrunali</li>
+        <li>Lipsa</li>
+        <li>Anusha</li>
+    </ol>
+
+
+    <h2>UnOrdered List</h2>
+    <h3>Name of Friends</h3>
+    <!-- by default it is disc  -->
+    <ul>
+        <li>Deepesh</li>
+        <li>Gourav</li>
+        <li>Mrunali</li>
+        <li>Lipsa</li>
+        <li>Anusha</li>
+    </ul>
+    <!-- instead of disc i want circle so just write type="circle" -->
+    <ul type="circle">
+        <li>Deepesh</li>
+        <li>Gourav</li>
+        <li>Mrunali</li>
+        <li>Lipsa</li>
+        <li>Anusha</li>
+    </ul>
+    <!-- instead of circle i want square so just write type="square" -->
+    <ul type="square">
+        <li>Deepesh</li>
+        <li>Gourav</li>
+        <li>Mrunali</li>
+        <li>Lipsa</li>
+        <li>Anusha</li>
+    </ul>
+    <!-- instead of square i want leaf or some small image so for that you need to write CSS -->
+    <ul type="square">
+        <li>Deepesh</li>
+        <li>Gourav</li>
+        <li>Mrunali</li>
+        <li>Lipsa</li>
+        <li>Anusha</li>
+    </ul>
+
+    <h1>Assignment on list </h1>
+    <h3>Name of Friends</h3>
+    <ol>
+        <li>Ravi</li>
+        <ol type="a" start="1">
+            <li>Subjects</li>
+            <ol type="i" start="1">
+                <li>Maths</li>
+                <li>Science</li>
+                <li>History</li>
+            </ol>
+            <li>Mobile</li>
+            <ol type="i" start="1">
+                <li>8959780296</li>
+            </ol>
+
+        </ol>
+
+        <li>Shankar</li>
+        <ol type="a" start="1">
+            <li>Subjects</li>
+            <ol type="i" start="1">
+                <li>Computer</li>
+                <li>DB</li>
+
+            </ol>
+            <li>Mobile</li>
+            <ol type="i" start="1">
+                <li>78848545782</li>
+            </ol>
+
+        </ol>
+        <li>Suman</li>
+        <ol type="a" start="1">
+            <li>Subject</li>
+            <ol type="i" start="1">
+                <li>Marketing</li>
+                <li>History</li>
+            </ol>
+            <li>Mobile</li>
+            <ol type="i" start="1">
+                <li>8954587124</li>
+                <li>7848558157</li>
+            </ol>
+
+        </ol>
+        <li>Naveen</li>
+        <li>Deepesh</li>
+
+    </ol>
+
+
+    <!-- to display image on the screen we have img tag -->
+    <h2>Example of img tag</h2>
+
+    <img src="rose3.jpg" alt="rose3" title="rose is beautiful">
+    <!-- dont give path like this  -->
+    <!--if the image is not there what ever is written inside alt will be printed-->
+    <img src="E:\New folder\TRAINING\Html\images\rose1.jpg" alt="rose1">
+    <!--what ever is written inside title will be printed on hover pointer to the image -->
+    <img src="images/rose1.jpg" alt="rose1" title="rose is beautiful">
+
+
+    <h2>Example href(hyper reference) and anchor tag</h2>
+    <!-- but this page will open in the same tab  -->
+    <!-- to open this in  a different tab write target="_blank" -->
+    <a href="Example1.html" target="_blank">Example1</a>
+    <a href="Example2.html">Example2</a>
+    <a href="../Html/src/Example3.html">Example3</a>
+
+
+    <h2>Suppose i have a small image and when i click on it it will give me all the details associated to it and the
+        bada image</h2>
+    <h2>Image as a hyperlink</h2>
+    <a href="images/rose2.jpg">
+        <img src="images/rose1.jpg">
+    </a>
+
+    <h2>mailto and tel</h2>
+    <h4>Contact</h4><br>
+    Deepak Borban <br>
+    Mobile: <a href="tel:8959780296">8959780296</a> <br>
+    Email: <a href="mailto:deepakborban0002@gmail.com">deepakborban0002@gmail.com</a> <br>
+
+
+    <h2>Hyper link to the same page </h2>
+    to see this pls <a href="hyperLinkToSamePage.html">click here </a> and got to this page
+
+
+
+    <h2>Example to play with background images </h2>
+    to see this pls <a href="background.html">click here </a> and got to this page
+
+
+
+    <h2>Example of html table </h2>
+    to see this pls <a href="table.html">click here </a> and got to this page
+
+
+    <h2>Assignment on table</h2>
+    to see this pls <a href="AssignmentOnTable.html">click here </a> and got to this page
+
+
+
+
+    <h2>Example of html form </h2>
+    to see this pls <a href="form.html">click here </a> and got to this page
+
+    <h2>Example of html form </h2>
+    to see this pls <a href="form_with_table.html">click here </a> and got to this page
+
+    <h2>Example of Cenematic View </h2>
+    to see this pls <a href="cinematic_View.html">click here </a> and got to this page
+
+    <h2>Example of Easy Scroll Snap </h2>
+    to see this pls <a href="Easy_scroll_snap.html">click here </a> and got to this page
+
+
+
+    <h2>Assignment of portfolio</h2>
+    to see this pls <a href="Assignment 3(Portfolio).html">click here </a> and got to this page
+    <br>
+
+
+
+    <h2>Example of fieldset  + applying font using link import and own font + text shadow and box shadow</h2>
+    to see this pls <a href="fieldSet.html">click here </a> and got to this page
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Of Html</title>
+
+
+
+
+
+
+
+
+    <div style="font-size: 100px; color:rgb(83, 75, 29);text-align: center;">HTML 5</div>
+    <p>Html will give us 2 different opprtunity html and html5
+        In Html 5 the way browser render the page will be little different
+        in html 5 we mention !DOCTYPE html here so we are telling our browser that the
+        document type is html so a soon as my browser see the information that iam going with html5 so it render the
+        page in that way
+    </p>
+    <h3>There are lot of difference betweem html and html 5</h3>
+    <h4>Html was not targeted for mobile phones so it was not user friendly there are lot of components which were
+        missing which was added in html5</h4>
+    <h4>So, Web developnment in html 5 is very easy and in html we will end up with writing lot of code for a small
+        validation but whereas when you come down to html5 so HTML5 made things very easy for the developers</h4>
+
+    <h1>!DOCTYPE html</h1>
+    <p>It tell browser that this document type is html5</p>
+    <h1>html lang="en"</h1>
+    <p>this is the language what we are instructing to our html means what is the language i an using here i am using en
+        i.e English language</p>
+    <h1> meta charset="UTF-8"</h1>
+    <p>it is character set so if you are using a language with has character more than
+        8 bits then that needs to be mentioned for Example if i am writing a chinese code or i want to print some
+        chinese character or japanese character or Hindi so it will gone to take more than 8 bits
+        so thats why we specify carset </p>
+
+    <h1> meta name="viewport" content="width=device-width, initial-scale=1.0"</h1>
+    <p>this is very important line as we always go with mobile first approach
+    <h3>what do you mean by this?</h3>----when ever you open any
+    of the website on the mobile so when you open browser in your phone it will occupupies the entier view of your
+    screen so that is what we are
+    mentioning here width=device-width meaning i have to open entire page just equally to the width of the device and
+    what should be the initial scale so weather this should be zoomed or not will be mentioned here
+    SO, remember html5 was targeted to the browsers of your mobiles because the mobile users are inceasing day by day as
+    compare to desktop users </p>
+
+
+
+
+    <img src="./HTML5/Html5_images/1.PNG">
+    <img src="./HTML5/Html5_images/2.PNG">
+    <p>so we were use lot of div and spans here which were not used earlier,
+        so if you want to do some small small animations, i am not sure if anybody have seen flash advertisements on the
+        browsers like small scroller
+
+    </p>
+    <p> You Know how to do thing scrolled --------> using marquee tag </p>
+    <p>Like this</p>
+    <marquee>This is the content which will keep scrolling !!!</marquee>
+    <p>so for this things i don't think we have to use flash it is still there but earlier like to do this small small
+        animation they use to use flash</p>
+    <p>So, flash is beautiful and it product of Adobe, where we use something called script wo we have to write lot of
+        such script So, we can write programs in the flash and soo many other things </p>
+    <p>But flash is very heavy and it need that particular flash player to be installed so browser started supporting
+        the flash player that will be acting as a object -----The flash object-----which were suppose to be embedded in
+        your browser</p>
+    <p>if you are the end user or target customer and you dont have the browser with the flash so it will redirect you
+        to flash site Adobe site where you are suppose to download the flash player
+        and then it use to work but it is always a risk because to display your content on the screen you are using some
+        third party tool that is always a risk part, thats a reason we stopped using flash completely
+        so we will how to perform beautiful animations using Html5 and CSS3
+    </p>
+    <p>like earlier to run a audio and video we used flash but where as html5 they have given a tag for it, there are
+        lots of attributes which is been added in the Html5 which we will explore now </p>
+    <p>followed by if i want to draw something on the screen earlier for that also we use flash but now we have canvas
+        and other things using which we can draw anything on the screen and GeoLocations are also there so you can get
+        the actual geo loaction you can allow the mic
+        to work you can allow the camera to work so there are lot of things which my HTML5 will support
+    </p>
+
+    <img src="./HTML5/Html5_images/3.PNG">
+
+
+    <img src="./HTML5/Html5_images/4.PNG">
+
+
+    <img src="./HTML5/Html5_images/5.PNG">
+    <p>html5 will give you lot of support for writing small small programs to the complex application it has lot of java
+        script code which is embedded in it so we need to just enable that and we can start using it it is magical but
+        at the same time the 2nd very important thing is</p>
+    <p>As a Developer what are the few things which i should always remember </p>
+    <p>1. You should adhere to the Html standards which we called as symantics </p>
+    <img src="./HTML5/Html5_images/6.PNG">
+
+    <img src="./HTML5/Html5_images/7.PNG">
+    <img src="./HTML5/Html5_images/8.PNG">
+    <img src="./HTML5/Html5_images/9.PNG">
+    <p>NOw for examples goto folder Html5(converted aspx to html)</p>
+    <p>in cmd to change file extension we have command
+    <p style="color: rgb(255, 0, 0);">ren *.aspx *.html</p>this command will convert all .aspx file to .html file at
+    that location</p>
+
+    <img src="./HTML5/Html5_images/10.PNG">
+    <p>To open Command prompt in same folder select the path remove it and write cmd in place of it and press enter
+    </p>
+    <img src="./HTML5/Html5_images/11.PNG">
+    <img src="./HTML5/Html5_images/12.PNG">
+    <p>then write the command ren *.aspx *.html and it will convert all aspx file into html file</p>
+    <img src="./HTML5/Html5_images/13.PNG">
+
+
+
+
+
+    <h1>Introduction ------LayOuts</h1>
+
+
+    <p>This is the Example of inner Div outer Div</p>
+    <h2>Example 1- <a href="HTML5/HTML5(converted aspx to html)/Introduction/Example1.html">click here </a> </h2>
+
+
+
+    <p>Example of top middle and bottom div</p>
+    <h2>Example 2- <a href="HTML5/HTML5(converted aspx to html)/Introduction/Example2.html">click here </a> </h2>
+
+
+
+
+
+    <p><b>Table VS Div</b></p>
+    <p>In table at any give point of time you cannot break this right pan and push it down that is not possible to see
+        this try to resize browser window and observe </p>
+    <p>Thats a main reason we will not use tables while creating layouts because no a days we concentrate more on mobile
+        design and in the mobile design we dont know there may be that right pan should not be there i want to push this
+        right pan at the bottom so i cannot do this using table thats a main reason we usually use divs in the the divs
+        i can push this to bottom</p>
+    <p>as it is a div i can instruct in the mediaquery saying if the screen size is this one get the particular div at
+        the bottombut that is not possible with the table</p>
+    <p>Now ho can i get this done ? -------->So may be i can play with the Width,You can see that in this example i an=m
+        playing with the width i am saying width:33%</p>
+    <p>also you can see that as we are floating them to the left ,So if you not folat them left so they will not store
+        one beside the other they will come one below the other because they are divs</p>
+    <p style=" color:green;">In CSS if you want to place one object beside another there are many ways to do it <br>
+        1. Absolute positioning<br>
+        2. Float:left </p>
+    <p>When ever you float them left so based on the content it automatically arrange to the left
+        side
+        <br>So while doing so while arranging them to the left side so after the right pan i want to break this
+        particular floating to break this floating you can see that u are adding this div clear <br>
+        div class="clear">/div <br>
+        .clear{clear: both;}<br>
+        If you are not doing this then this particular bottom will also float to the right side thats a main reason why
+        we are doing this clear:both-------> meaning clear the floating either to the left or right
+    </p>
+    <h2>Example 3- <a href="HTML5/HTML5(converted aspx to html)/Introduction/Example3.html">click here </a> </h2>
+
+
+
+    <p><b>Here we have a outer-div which encapsulate whole application then we have nav + left + middle + bottom
+            section</b></p>
+    <h2>Example 4- <a href="HTML5/HTML5(converted aspx to html)/Introduction/Example4.html">click here </a> </h2>
+
+
+    <p><b>Shadow Window which has Gradient------we are using box shadow here + We are using filters here this will help
+            me to get the gradient</b></p>
+    <h2>Example 5- <a href="HTML5/HTML5(converted aspx to html)/Introduction/Example5.html">click here </a> </h2>
+
+
+    <p>Setting Background</p>
+    <h2>Example 6- <a href="HTML5/HTML5(converted aspx to html)/Introduction/Example6.html">click here </a> </h2>
+
+
+    <p><b>Use of Section and article tag</b></p>
+    <h2>Example 7- <a href="HTML5/HTML5(converted aspx to html)/Introduction/Example7.html">click here </a> </h2>
+
+
+    <p><b>Use of Header, nav, article, footer, section tags---------- has nothing to do with alignment and arrangement
+            and all this a symantic what we use in html5<br>
+            Html5 has certain rules which says that whenever you have this layout so you should know exactly what layout
+            you are using <br>'
+            So, all your heading section should go in your header <br>
+            navigation will also be the part of header section navigation is something which move from one page to
+            another and that will be fix always and for navigation we always use nav tag<br>
+            this tags will tell us and the other developers that this is what part so this is the standards what we have
+            to use thats why we called them symmantic</b></p>
+    <h2>Example 8- <a href="HTML5/HTML5(converted aspx to html)/Introduction/Example8.html">click here </a> </h2>
+
+
+
+
+    <h1>Forms</h1>
+
+
+    <p><b style="color: rgb(139, 141, 20)">Required Attribute-------->required="required" using this we are making that
+            field mandatory</b></p>
+    <p><b style="color: rgb(139, 141, 20)">action="#"</b> Action says where to send the data</p>
+    <p><b style="color: rgb(139, 141, 20)">method="post"</b> Method says How to send the data </p>
+    <p><b style="color: rgb(139, 141, 20)">placeholder</b>---->use to create a illusion for the text box which will have
+        the text in it
+        meaning ek textbox ke andar i should have a label and that label will have the text what ever user have entered
+        here ,So user say enter your name so that particular text will gone to be printed here and there will be a small
+        java script which will be attached to this controll , SO What that particular javascript does is ----> As soon
+        as user enters any key on the keyboard it triggers/fires a event and that particular event will be captured by
+        this java script </p>
+    <p>As soon as user types anything here so ill gone to have my javascript whih will capture this one and checks if
+        user have entered any character , if the user have entered any character What i do ?---------->I Erase this
+        particular content && if the user have not entered any character So i get this msg back </p>
+    <p>So this entire part i have to do you need to have one particular controll inside that i have to do one more
+        controll and that particular controll will have this message printing I can just enable this particular controll
+        and disable this particular controll or make the visiblity true or false to this particular controll</p>
+    <img src="./HTML5/Html5_images/20.PNG">
+
+    <p>So How do you set the visiblity of any controll to true or false Show or hide how do you do that </p>
+    <p>So to do this i'll play with display-------> display:none or show</p>
+    <p>this is the code what they had already written for us </p>
+
+    <p>now how will i prove that ?</p>
+    <p>Open this file in crome<br>
+        right click---->go to inspect </p>
+    <img src="./HTML5/Html5_images/14.PNG">
+    <p> click on this small arrow</p>
+    <img src="./HTML5/Html5_images/15.PNG">
+    <p> you will see this shadow root------->no SO, untill and unless you wont enabeling this you cant see this</p>
+    <img src="./HTML5/Html5_images/16.PNG">
+    <p>so to enablr this what you have to do is </p>
+    <p>click on this gear</p>
+    <img src="./HTML5/Html5_images/17.PNG">
+    <p>in the element you will have this show user agent shadow just check that and now you can see shadow root </p>
+    <img src="./HTML5/Html5_images/18.PNG">
+    <p>now you can clearly see that they have written some code here</p>
+    <img src="./HTML5/Html5_images/19.PNG">
+    <p>look at this part</p>
+    <img src="./HTML5/Html5_images/21.PNG">
+    <p>when i come down here look at the heighlighted part</p>
+    <img src="./HTML5/Html5_images/22.PNG">
+    <p>now look at this heighlighted part</p>
+    <img src="./HTML5/Html5_images/23.PNG">
+    <p>both are diffrent 1st is outerbox and the 2nd one is innerbox like this</p>
+    <img src="./HTML5/Html5_images/20.PNG">
+    <p>so in the inner part they have the id placeholder</p>
+    <img src="./HTML5/Html5_images/24.PNG">
+    <p>style it says display blocked and !important</p>
+    <p>What is this important used for ---------->when ever you specify important that will be applied even if you
+        modify something it will never bothered </p>
+    <img src="./HTML5/Html5_images/25.PNG">
+    <p>So, shadow dom will be shadow root dom which will be created by html5</p>
+    <p>as soon as i type something here it says display none</p>
+    <img src="./HTML5/Html5_images/26.PNG">
+    <p>whenever i type something that particular character will come in this div</p>
+    <img src="./HTML5/Html5_images/27.PNG">
+    <p>meaning the textbox is not a actual input textbox in html5 so they have modified that input textbox into soo many
+        things they have added lot of controlls inside it ,So this makes lot of difference beteen your normal html4
+        textboxesor the controlls wwhat ever you use and the html5 controlls whtever we are using </p>
+    <p>The additional attribute what i can put here in input is <b style="color: rgb(139, 141, 20)">type=""</b>
+        type="text" &nbsp; type="email" &nbsp; type="password" &nbsp; type="email" &nbsp; type="submit" &nbsp;
+        type="reset"</p>
+    <p>Now what is the magical thing <b style="color: rgb(139, 141, 20)">type="email"</b>does is </p>
+    <img src="./HTML5/Html5_images/28.PNG">
+    <p>if i put some information here and if my email id is not correct so there is a validation which is already
+        written for you </p>
+    <p>So, is it a perfect email id validation ?----------> may not be, but it validates</p>
+
+
+    <p>where ever you want to just chek for vlidation like password should be 1letter capital 1special character and
+        atleast 8 character and should have numbers so you need to use Regular expression you have to customise it with
+        this it will not give you that level of validation</p>
+
+    <h2>Example - 1<a href="HTML5/HTML5(converted aspx to html)/Form/Example1.html">click here </a> </h2>
+
+
+
+
+
+
+    <p><b>Drop Dowm Controll</b></p>
+    <p>We have already see to get dropdown we use select option</p>
+    <p>but here we have a dropdown but here we have not use select we have used<b
+            style="color: rgb(139, 141, 20)">datalist</b> here <br>
+        So the advantage of this is as soon as i start typing here it will autocompletes it or we automatically get the
+        information filtered </p>
+    <p>So there are two parts of it <br>
+        1st is input and in input list="id name of data list"<br>
+        2nd is datalist and in the data list you can put all the options here </p>
+    <h2>Example - 2<a href="HTML5/HTML5(converted aspx to html)/Form/Example2.html">click here </a> </h2>
+
+
+    <p><b style="color: rgb(139, 141, 20)">Keygen</b> Here we are generating a keygen</p>
+    <p>Keygen is something which will be automatically generated by the client side to validate or to pass a encrypted
+        code to server </p>
+    <p>So this will generate an encrypted key which can be pass to the server and serverr kepps validating that
+        particular key just to check like who is sending the request and how are they sending the request , so this is
+        always be the unique key which is generated </p>
+    <p>as soon as you type something and press submit </p>
+    <img src="./HTML5/Html5_images/29.PNG">
+    <p>as soon as you click on submit this username will be passed with the encrypted key which will be generated</p>
+    <img src="./HTML5/Html5_images/30.PNG">
+    <p>usually we will be controlling all this things with the server side encryption and other things so we'll not be
+        bother about that more here </p>
+
+
+    <h2>Example - 3<a href="HTML5/HTML5(converted aspx to html)/Form/Example3.html">click here </a> </h2>
+
+
+
+    <p><b style="color: rgb(139, 141, 20)">Range and Number</b></p>
+    <p>when you scroll this here so you need a placeholder where the particular content will be printed so earlier we
+        always use to do this using some kind of javascript and that javascript will gone to read based on this
+        particular scrolling on the change of this scroll it suppose to get this particular value and push it to some
+        kind of contentor some kind of place holder </p>
+
+    <img src="./HTML5/Html5_images/31.PNG">
+    <p>this was little modified in html 5 </p>
+    <p>look at this form it says oninput=""meaning on the form i am writing the code so anybody who changes in the form
+    </p>
+    <p>on the change in the form i'll go with drange </p>
+    <p>What is this drange --------->Drange is the name in the output</p>
+    <p>drange.value meaning drange's value = arange.value </p>
+    <p>arange is the id in input whose type is range , so iam taking inputs value and putting it in output</p>
+    <p>so without touching javascript we are achieveing all this things </p>
+
+    <p>same we are doing with input type="number" here we have specified the value min and max these are the minimun and
+        maximum values </p>
+    <h2>Example - 4<a href="HTML5/HTML5(converted aspx to html)/Form/Example4.html">click here </a> </h2>
+
+
+
+    <p><b style="color: rgb(139, 141, 20)">Autocomplete </b>is by default on if you off it so you will not get the
+        suggessions</p>
+    <h2>Example - 5<a href="HTML5/HTML5(converted aspx to html)/Form/Example5.html">click here </a> </h2>
+
+
+
+
+    <p><b style="color: rgb(139, 141, 20)">type="color"<br>type="date"<br>type="url"---it validates url like starts with
+            http:// followed by www. ends with .com or .in ....... like this if you give something else it will give you
+            error<br>type="text"<br>type="email"</b>
+    </p>
+    <p><b style="color: rgb(139, 141, 20)">Properties like-------autofocus , multiple, pattern</b></p>
+    <h2>Example - 6<a href="HTML5/HTML5(converted aspx to html)/Form/Example6.html">click here </a> </h2>
+
+
+
+    <p><b style="color: rgb(139, 141, 20)">Custom Error Message using-----> oninvalid="setCustomValidity('Please enter
+            name')"</b></p>
+    <h2>Example - 7<a href="HTML5/HTML5(converted aspx to html)/Form/Example7.html">click here </a> </h2>
+
+
+    <h1 style="color: rgb(139, 141, 20)">Canvas</h1>
+    <h1>Drawing straight line</h1>
+    <p>I want to draw something on screen so what i can do<br>
+        whenever you want to draw anything on the screen imagine you are a painter so what you will do How do you paint
+        anything what is important for you brush, color, sheet(canvas) So here also we can draw using canvas</p>
+
+    <p>I have a canvas here which has a line drawn so when you right click on canvas you will not get the inspect and
+        all you will get save as image and all</p>
+    <img src="./HTML5/Html5_images/32.PNG">
+    <p>meaning this is a completely different controll </p>
+    <h1><b style="color: rgb(139, 141, 20)">document.getElementById("name of id")</b> this is how to read the element by
+        id </h1>
+    <h2>Example 1 -<a href="HTML5/Canvas/Canvas1.html">click here </a> </h2>
+
+
+
+
+
+
+    <p><b style="color: rgb(139, 141, 20)">filling rectangle with color using fillRect</b></p>
+    <h2>Example 2 -<a href="HTML5/Canvas/Canvas2.html">click here </a> </h2>
+
+
+
+    <p><b style="color: rgb(139, 141, 20)">circle using arc(95, 50, 40, 0, 2 * Math.PI);</b></p>
+    <h2>Example 3 -<a href="HTML5/Canvas/Canvas3.html">click here </a> </h2>
+
+
+    <p><b style="color: rgb(139, 141, 20)">printing text using fillText("Hello World", 10, 50);</b></p>
+    <h2>Example 4 -<a href="HTML5/Canvas/Canvas4.html">click here </a> </h2>
+
+    <p><b style="color: rgb(139, 141, 20)">filling rectangle with gradient color using createLinearGradient(0, 0, 200,
+            0);</b></p>
+    <h2>Example 5 -<a href="HTML5/Canvas/Canvas5.html">click here </a> </h2>
+
+
+    <p><b style="color: rgb(139, 141, 20)">filling circle with gradient color </b></p>
+    <h2>Example 6 -<a href="HTML5/Canvas/Canvas6.html">click here </a> </h2>
+
+    <p>Assignment - if you draw this you will be perfect in canvas</p>
+    <img src="./HTML5/Html5_images/33.PNG">
+
+
+
+
+
+    <h1 style="color: rgb(139, 141, 20)">Drag And Drop</h1>
+    <h2><a href="HTML5/DragDrop/DragDrop1.html">click here </a> </h2>
+    <p>before drap and drop our div is empty</p>
+    <img src="./HTML5/Html5_images/34.PNG">
+    <p>after drag and drop our div contains image</p>
+    <img src="./HTML5/Html5_images/35.PNG">
+
+
+
+
+
+    <h1 style="color: rgb(139, 141, 20)">GeoLocations</h1>
+    <p>It will give the latitude and longitude of current where you are so you can pass that latitude and longitude to
+        the google map </p>
+    <h2>Example - 1<a href="HTML5/HTML5(converted aspx to html)/GeoLocation/Example1.html">click here </a> </h2>
+    <p>here it suppose to work but the key is expired this is because its not working like it suppose to show your
+        current location</p>
+    <h2>Example - 2<a href="HTML5/HTML5(converted aspx to html)/GeoLocation/Example2.html">click here </a> </h2>
+
+
+
+
+
+    <h1 style="color: rgb(139, 141, 20)">Media</h1>
+    <p>playing video and audio</p>
+    <h2>Example - 1<a href="HTML5/HTML5(converted aspx to html)/Media/Example1.html">click here </a> </h2>
+
+
+
+
+
+
+
+    <h1 style="color: rgb(139, 141, 20)">Query Selector</h1>
+    <p>playing video and audio</p>
+    <h2>Example - 1<a href="HTML5/QuerySelector/QuerySelector.html">click here </a> </h2>
+
+
+
+    <p>Http is a stateless protocol what does it mean?</p>
+    <p>I have a client, client will send the request which comes and hits my server this is called as request So i get a
+        request to my server <br>
+        so what my server will do?<br>
+        it will wrap all the information what my client has required or requesting for and it will send the response
+        back, anything which comes fron server to client is called response <br>
+        once the server sends the response back to the client it will forget that particular request <br>
+        this is the speciality of http<br>
+        so HTTP is a stateless protocol------->means it will never remember what previous request has given to you </p>
+    <br>
+    <p>in amazon we searched for smartphone ------> inspect element-------->goto network</p>
+    <img src="./HTML5/Html5_images/36.PNG">
+    <p>as soon as i keep scrolling look at this </p>
+    <img src="./HTML5/Html5_images/37.PNG">
+    <p>iam getting the responces</p>
+    <img src="./HTML5/Html5_images/38.PNG">
+    <p>and i'll have a pagination here </p>
+    <img src="./HTML5/Html5_images/39.PNG">
+    <p>when i hover on 2 observe here-------can you see it is passing some number there page 2 qid= its passing the
+        pageno and the qid both together</p>
+    <img src="./HTML5/Html5_images/40.PNG">
+    <p>so now in the server side what i do so server will not know that it has already served the first page <br>
+        1st time when i say smart phone when i 1st send request fron client to server so i have written some program
+        here so you got this particular request ok so take this and pass some 10 or 20 objects to my page so i get this
+        data and i rendered that on the screen </p>
+    <p>now user want to get the next page next set of data </p><br>
+    <p>Suppose i dont have any button and i keeps scrolling just like Snapdeal-------SNAPDEAL will keeps scrolling and
+        keeps updating it there what happens so it again send the request back to the server at this time you will say
+        baba please give me second page data meaning your server will not know to what it has served for</p>
+    <br> <br>
+    <p>Take a Example I have a login page i want to go to account page </p>
+    <img src="./HTML5/Html5_images/41.PNG">
+    <p>SO i pass my userid and password and click on login ------>once you click on login it validates </p>
+    <p>from where i am getting this message ---->from the server </p>
+    <img src="./HTML5/Html5_images/42.PNG">
+    <p>so whenever i put my id pass and send request to the server, Server will talking to its handler here [Data Access
+        Layer]
+        and my dataaccess layer will talk to my databaseit will check for username and password if it is wrong it will
+        send the false message based on that it it will wrap the particular object and send back to the browser and it
+        will print on the screen
+    </p>
+    <p>But what if i pass correct username and password---------->it takes and it will go to the next page <br>
+        now it is like entry<br>
+        we have lot of pages in the website like loginpage, account page, transaction page, balance enquiry page, loan
+        history page, ..............like this we have lot of pages</p>
+    <p>Can i come to loan page directly without the login page </p>
+    <p>can i come down to account page directly without going to login page</p>
+    <p>this is the first page of website</p>
+    <img src="./HTML5/Html5_images/43.PNG">
+    <p>this is the login page </p>
+    <img src="./HTML5/Html5_images/44.PNG">
+    <p>can i come to login page directly without going to first page--------YES you just have to remember this url and
+        just paste this in browser </p>
+    <img src="./HTML5/Html5_images/45.PNG">
+    <p>now imagine if you are able to go to account page without going to the login page So it will be like hacking</p>
+    <p>Now being a developer if you are allowing somebody to directly go to the acc page so this is very bad </p>
+    <p>So we have to allow only the authorised person to caome to acc page</p>
+    <p>so you have to secure this acc page how to secure we will see that in asp.net</p>
+    <p>apart from acc page which pages should be secure ----------transaction page, balance enquiry page,loan history
+        page,</p>
+    <p> so you login and if u are a valid user so it will take you to the next page from login page it will take u to
+        the acc page <br>
+        but when you are moving from account page to some other page for ex to profile page<br>
+        so how do you validate that particular user is a valid user </p>
+    <p>imagine these are the different rooms in your office if you put access card in one room and entered this dosent
+        mean that without having access card you can access to another rooms also every room you go you have to tap the
+        access card so that the door gets open</p>
+    <p>So how do you do that here so we have to make server to remember ki pehla wala jo request aaya tha na please
+        remember that request but server will never remember pehla wala jo aaya tha aaya tha mene dikha diya hogaya done
+        i'll forget </p>
+    <p>it is just like you go to the doctor for the 1st time so they will check you and gave you the medicine and told
+        you that even if you dont feel good so come after 3 days so
+        what you will do you will go to the same doctor or to different doctor
+        -------------same doctor
+        and when you go back to the same doctor do you think that particular doctor will remember you after 3 days
+        --------------NO
+        so you have to take parchi what doctor have given to you in the day 1 if you are not carrying that to the doctor
+        ,so doctor will never know that i have already treated that person
+    </p>
+    <br><br>
+    <p>exactly in the same way when the request came to the server so server would have already served that request so
+        if the client will again send the request so server should always pass that authentication key from one page to
+        another page ,if you are not passing that authenticatin key so server will never know that this guy is
+        authenticated it will gone to ignore that particular request and redirect to login page based on the code what
+        you have written <b>so that key becomes very important for you </b></p>
+    <br><br>
+    <p><b>Now how will you hold that particular key at the client side so that when the next request come i'll take that
+            particular key and pass that particular key to this particular guy</b></p>
+
+    <br><br>
+    <p>when user enter its user name and password and clicks on login then i want to pass that username from test1.html
+        to test2.html so how will i do that --------so for this you should write a server side code , where it take this
+        data pass to the server server will take this wrap this in some kind of object and send it back with the second
+        response but wil the html5 we a easy way to do this </p>
+    <h2>test1.html<a href="./Test1.html">click here </a> </h2>
+    <p>so to do this we have a mechanism of localstorage</p>
+    <p>inspect and goto application this is at the client side </p>
+    <img src="./HTML5/Html5_images/46.PNG">
+    <p>here we have local storage and session storage and we have cookies</p>
+    <p>Cookie contains the site data at very small amount 4kb of data which will be associated to that particular
+        website
+        <br>so what is the use of that
+    </p>
+    <img src="./HTML5/Html5_images/47.PNG">
+    <p> can you see some of the things are listed here -------->these are previous searches-------->but i havent logged
+        in na then how am i getting this recent searches <b>through cookies</b> </p>
+    <img src="./HTML5/Html5_images/48.PNG">
+    <p>amazon will also handle lot of such storage</p>
+    <img src="./HTML5/Html5_images/49.PNG">
+    <p>even it has the local storage also</p>
+    <img src="./HTML5/Html5_images/50.PNG">
+    <p>so these are some of the things which any website will gone to store and all this information will be stored at
+        the client side and you can always access this data anytime soto access this data at the client side you can
+        always use this local storage </p>
+
+    <p>How do we do that </p>
+    <p>that is been gin in this example session ----example1</p>
+    <h1>Session</h1>
+    <p>it says how may time you clicked the button</p>
+    <h2>Example 1 -Local Storage<a href="HTML5/HTML5(converted aspx to html)/Session/Example1.html">click here </a>
+    </h2>
+    <img src="./HTML5/Html5_images/51.PNG">
+    <p>if you copy this and close all the tabs</p>
+    <img src="./HTML5/Html5_images/52.PNG">
+    <p>i'll reopen this and paste the url</p>
+    <img src="./HTML5/Html5_images/53.PNG">
+    <p>see it says 21 times</p>
+    <img src="./HTML5/Html5_images/54.PNG">
+    <p>if you close all the tab and reopen this file then also it will store the data <br>
+        meaning like even if you close the browsers still i am stroing this data somewhere so where are we storing this
+        data---------go back to your application and see </p>
+    <p>inside local storage you can see checkcount </p>
+    <img src="./HTML5/Html5_images/55.PNG">
+    <p>This is what we are doing </p>
+    <br><br>
+    <p>Now how we are doing----- <a href="HTML5/HTML5(converted aspx to html)/Session/Example1.html">go to code </a>
+    </p>
+
+
+    <h2>Example 2 -Session Storage<a href="HTML5/HTML5(converted aspx to html)/Session/Example2.html">click here </a>
+    </h2>
+    <p>add to cart</p>
+
+    <p>one more example of localStorage</p>
+    <p>you put your name and pass here it will store the name in localstorage and take you to test2.html and print your
+        name there</p>
+    <h2>test1.html<a href="./Test1.html">click here </a> </h2>
+
+
+
+    <h1>Animations</h1>
+    <p>have you seen flip book there you can see we gone to draw the diagram ---take a example that you want to do a
+        animation of a particular ball moving from one place to another place</p>
+    <p>this is our 1st Frame</p>
+    <img src="./HTML5/Html5_images/56.PNG">
+    <p>this is our 2nd Frame</p>
+    <img src="./HTML5/Html5_images/57.PNG">
+    <p>this is our 3rd Frame</p>
+    <img src="./HTML5/Html5_images/58.PNG">
+    <p>this is our 4rth Frame</p>
+    <img src="./HTML5/Html5_images/59.PNG">
+    <p>this is our 5th Frame</p>
+    <img src="./HTML5/Html5_images/60.PNG">
+    <p>this is our 6th Frame</p>
+    <img src="./HTML5/Html5_images/61.PNG">
+    <p>this is our 7th Frame</p>
+    <img src="./HTML5/Html5_images/62.PNG">
+    <p>this is our 8th Frame</p>
+    <img src="./HTML5/Html5_images/63.PNG">
+    <p>so each one of this is called frame and we keep capturing this frame, So in animations frames become very
+        important
+        you know about your camera what you are using in your mobile there you have something called shutter speed
+        there you have frames per second (FPS), Refreshment rate all this things is related to the same
+    </p>
+    <p>if you want to know more about frames it is easy open your mobile open camera and see the white screen on laptop
+        so you will see the flipring there that is because of the frames so if you go with the heigher end phones to jo
+        flipring aata hai wo bhot kam aata hai the screen will not flipper so much</p>
+    <img src="./HTML5/Html5_images/64.PNG">
+    <img src="./HTML5/Html5_images/65.PNG">
+    <img src="./HTML5/Html5_images/66.PNG">
+<p>In this frame what is that i am going to do i am trying to change the color </p>
+    <h2>Example - 1<a href="HTML5/Animation/Example1.html">click here </a> </h2>
+    <h2>Example - 2<a href="HTML5/Animation/Example2.html">click here </a> </h2>
+    <p>when i move my mouse pointer to it what should i have to do</p>
+    <h2>Example - 3<a href="HTML5/Animation/Example3.html">click here </a> </h2>
+    <p>animated galary</p>
+    <h2>Example - 4<a href="HTML5/Animation/Example4.html">click here </a> </h2>
+    <p>beautiful effects</p>
+    <h2>Example - 5<a href="HTML5/Animation/Example5.html">click here </a> </h2>
+    <p>amazing css</p>
+    <h2>Example - 6<a href="HTML5/Animation/Example6.html">click here </a> </h2>
+    <p>3D amimation using pure css3</p>
+    <h2>Example - 7<a href="HTML5/Animation/Example7.html">click here </a> </h2>
+    <p>box shadow and text shadow example</p>
+    <h2>Example - 8<a href="HTML5/Animation/Example8.html">click here </a> </h2>
+
+
+
+
+</body>
+
+</html>

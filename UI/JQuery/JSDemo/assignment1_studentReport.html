@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Student Mark list</h1>
+        Student ID :<input type="text" id="txtStudentId" placeholder="Enter Student Id"><br>
+        Mark 1 : <input type="text" id="txtMark1" placeholder="Enter mark1"><br>
+        Mark 2 : <input type="text" id="txtMark2" placeholder="Enter mark2"><br>
+        Mark 3 : <input type="text" id="txtMark3" placeholder="Enter mark3"><br>
+        Mark 4 : <input type="text" id="txtMark4" placeholder="Enter mark4"><br>
+        Mark 5 : <input type="text" id="txtMark5" placeholder="Enter mark5"><br>
+        Mark 6 : <input type="text" id="txtMark6" placeholder="Enter mark6"><br>
+        Average Mark : <label for="" id="lblAverage"></label><br>
+        Total : <label for="" id="lblTotal"></label><br>
+        Result : <label for="" id="lblResult"></label>
+        <button onclick="report()">Submit</button>
+    </body>
+    <script>
+        function report(){
+            var mark1 = parseInt(document.getElementById("txtMark1").value);
+            var mark2 = parseInt(document.getElementById("txtMark2").value);
+            var mark3 = parseInt(document.getElementById("txtMark3").value);
+            var mark4 = parseInt(document.getElementById("txtMark4").value);
+            var mark5 = parseInt(document.getElementById("txtMark5").value);
+            var mark6 = parseInt(document.getElementById("txtMark6").value);
+            var average = 0;
+            var result = 0;
+            var total = 0;
+            average = calculateAverage(mark1,mark2,mark3,mark4,mark5,mark6);
+            result = calculateResult(mark1,mark2,mark3,mark4,mark5,mark6);
+            total = calculateTotal(mark1,mark2,mark3,mark4,mark5,mark6);
+        }
+        function calculateAverage(mark1,mark2,mark3,mark4,mark5,mark6){
+            return (mark1 + mark2 + mark3 + mark4 + mark5 + mark6)/6;
+        }     
+        function calculateTotal(mark1,mark2,mark3,mark4,mark5,mark6){
+            return (mark1 + mark2 + mark3 + mark4 + mark5 + mark6);
+        }
+        function calculateResult(mark1,mark2,mark3,mark4,mark5,mark6){
+            var percent = calculateAverage();
+            if(percent <= 35){
+                return fail;
+            }else if(35 <= percent)
+        } 
+    </script>
+</html>

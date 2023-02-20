@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <style>
+        .msg {
+            width: 150px;
+            height: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            box-shadow: 2px 2px 2px #333;
+            /* when i move my mouse pointer her i should get a thumbnail */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="msg" id="btnPrintMessage">print message</div>
+    <script>
+        //now what is binding your html code with the javascript code ? 
+        //binding means what is making it to work , what is making this div to call this function----------onclick
+        //so the event is one which will bind your UI program with your javascript code if i dont write this i will not get this alert at all
+        //it is the click which does the magic 
+
+        //so what i do here i will write a function
+        function init() {
+            //now what my init function will do, i'll write this binding 
+            //i'll write event binding code here for all the buttons this and that here
+            //now this will be very easy for me i have the complete UI code and my event binding is already done in my java script 
+            //so i'll not bother to go back and writing onclick in div , i'll never do that 
+
+            //we know that  how to call this init is'nt it, as soon as my body gets loaded or may be in my window object 
+
+            console.log("Hi");//on window load i am calling this init which will print me hi
+
+
+            //But how will you bind now, how can i get this div object in java script ------------i can go with the Id or I can go with the class 
+            //but here this is a print message so i want this printMessage funtion to be called on the click of this particular button not any other button
+            //like when you click on + mark you want to call only the addition method you dont want to call the subraction also thats a reason we will go with id
+            //so id will always be unique all of know that 
+
+            let btnObject = document.getElementById("btnPrintMessage"); // here i am not writing the .value so i will get the whole object
+            //no to this button i'll say addeventlistener
+            //what my addeventlistner does its taking a parameter it will take keyof HTMLElementEventMap, listner
+            //meaning what is the event which you have to bind -------click event,    onclick is a handler pls remember 
+            //and who is the caller who is the handler for it, when you click on this which method i have to call -------printMessage()
+            btnObject.addEventListener('click', printMessage); //we will not write () after function here means you should not call that event i am binding it  
+
+            //now tommorow if bussiness will say i dont want this button lets go with another one so what is the change i have to do?
+            //-----we just have to put the particular id there 
+
+
+            //so pls segregate your UI code with js code never write onclick that and this at all......
+
+            //but in some places like may be in the framework they will specify this , you have to write the particular binding 
+            //for example in angular if want to have a particular button to perform some kind of click event so they will gone to use the event handler
+            //within a () i'll specify click and is equal to what method i have o call , so that we do 
+
+            //but if yo want to write  a pure javascript or vanilla javascript and want to segrigate so you can always do this magical things look at this it is so beautiful
+            //so meaning i have to just create all the design and forget 
+            //i just have to make sure that i remember id , id becomes important for me because wihout id i cannot tag 
+            //so the contract between the designer and the developer is this id 
+        }
+
+        window.onload = function(){
+            init();
+        }
+        //this is the handler
+        function printMessage() {
+            alert("Welcome");
+        }
+
+    </script>
+</body>
+
+</html>

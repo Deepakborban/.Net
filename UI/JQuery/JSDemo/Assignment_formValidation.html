@@ -1,0 +1,51 @@
+<!-- i want you to read all the data and print it in a table or you put it in a row or column wise ,
+     reading the gender will become little chalenging because you  need to read from the radio buttons
+    then hobbies will be based on the check boxes 
+with option you have to give id and you have to say .value and you will get the value -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Register Me</h3>
+
+      <form action="success.html" method="post" onsubmit="getData()">
+        <!-- <form action="success.html" method="post"> -->
+            <!-- i dont want to go to success.html even thoe user clicks on it i dont want to go 
+            i want to controll that behaviour through my javascript  -->
+        <label for="name">Enter your name :</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="pwd">Enter password :</label>
+        <input type="password" name="password" id="pwd"><br>
+        <label for="cpwd">Confirm password :</label>
+        <input type="password" name="cpassword" id="cpwd"><br> 
+        <label for="gender">Gender :</label>
+        Male :<input type="radio" name="gender" id="male" value="Male">
+        Female : <input type="radio" name="gender" id="female" value="Female"> <br>
+        Address  :<br>
+        <textarea name="address"  rows="5" cols="20" maxlength="10" id="address"></textarea><br>
+        <label for="hobbies">Hobbies :</label>
+        <input type="checkbox" name="hobbies" id="ho1">Music
+        <input type="checkbox" name="hobbies" id="ho2">Coocking
+        <input type="checkbox" name="hobbies" id="ho3">Playing Games
+        <input type="checkbox" name="hobbies" id="ho4">Travelling  <br>
+        <label for="">Select States</label>
+        <select name="states" id="state">
+            <option>Madhya Pradesh</option>
+            <option>Bihar</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+        </select><br>
+        <label for="">Upload Resume</label>
+        <input type="file" name="file" id="" accept=".pdf ,.docs"><br>
+        <!-- <input type="submit" value="Click Here to Register" onsubmit="getData()"> either you can write onsubmit here or in form -->
+        <input type="submit" value="Click Here to Register">
+        <input type="reset" value="Click Here to Reset">
+    </form>
+    <script src="script/Assignment_formValidation.js"></script>
+</body>
+</html>

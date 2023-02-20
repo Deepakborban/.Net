@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Controls using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.form.js"></script>
+        
+        
+        <script type="text/javascript">
+		jQuery(document).ready(function($){
+                $("#uploadform").ajaxForm({
+				    success: function() {
+				        alert("Upload completed!");
+				    }
+				});
+            });
+	</script>
+    </head>
+    <body>
+        <h1>Select a filie</h1>
+
+	<form id="uploadform">
+		    <input type="file" id="fileupload" name="fileupload" />
+		    <input type="submit" value="Upload!" />
+		</form>
+
+    </body>
+</html>

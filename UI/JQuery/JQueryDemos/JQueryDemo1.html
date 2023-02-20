@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+</head>
+<!-- <body  onload="init()"> -->
+<!-- but if you dont want to do this on the load here so inside script you can specify window.onload = function(){init()} -->
+<!-- difference is here when the body start rendering  thats when we are calling the onload method
+but where here we are going with the window object  -->
+<body>
+    <p>On the page load i want to print something on the screen i want to put a alert</p>
+    <script>
+
+        //alert('welcome');     //but this is not a good way of writing the code, so never do this 
+
+        // so i will put this inside a function
+        function init() {
+            alert("Welcome");
+        }//now i need to call this init somewhere and that should be on the load
+        //so in the body we specify onload
+
+        window.onload = function(){
+            init();
+        }
+    </script>
+</body>
+
+</html>

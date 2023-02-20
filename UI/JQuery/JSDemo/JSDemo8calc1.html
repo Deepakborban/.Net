@@ -1,0 +1,45 @@
+<html>
+
+<head></head>
+
+<body>
+    <input type="text" name="" id="txtNo1" placeholder="Enter 1st number"><br>
+    <input type="text" name="" id="txtNo2" placeholder="Enter 2nd number"><br>
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">X</button>
+    <button onclick="div()">/</button>
+
+    <script>
+        function add(){
+            var no1 = document.getElementById("txtNo1").value;//here we are reading the data from the text box so
+            // will not get the sum rather we get the containation because whatever we read from textbox 
+            //js will treat that as a string not as number , so we need to convert this text to number so 
+            // for this we use------------parseInt
+            var no2 = document.getElementById("txtNo2").value;
+            var result = parseInt(no1) + parseInt(no2);
+            alert('Sum of number is :' + result);
+        }
+        function sub(){
+            var no1 = document.getElementById("txtNo1").value;
+            var no2 = document.getElementById("txtNo2").value;
+            var result = parseInt(no1) - parseInt(no2);
+            alert('Subtract of number is :' + result);
+        }
+        function mul(){
+            var no1 = document.getElementById("txtNo1").value;
+            var no2 = document.getElementById("txtNo2").value;
+            var result = parseInt(no1) * parseInt(no2);
+            alert('Product of number is :' + result);
+        }
+        function div(){
+            var no1 = document.getElementById("txtNo1").value;
+            var no2 = document.getElementById("txtNo2").value;
+            var result = parseInt(no1) / parseInt(no2);
+            alert('Division of number is :' + result);
+        }
+    </script>
+
+</body>
+
+</html>

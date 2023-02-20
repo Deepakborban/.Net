@@ -1,0 +1,29 @@
+
+<!-- Assignment for you here is you have to do a validation message 1 validate message saying like  -->
+ <!-- untill and unless user type the same message it should get msg like pass and cpassword dosent match -->
+<!-- if pass and cpass is same then the err msg should --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Register Me</h3>
+
+      <form action="#" method="post" onsubmit="validatePassword()">
+        <label for="name">Enter your name :</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="pwd">Enter password :</label>
+        <input type="password" name="password" id="pwd"><br>
+        <label for="cpwd">Confirm password :</label>
+        <input type="password" name="cpassword" id="cpwd" oninput="confirmPassword()"><br> 
+        <input type="submit" value="Click Here to Register">
+        <input type="reset" value="Click Here to Reset"><br>
+        <label for="" id="errMsg" style="color: red;"></label>
+    </form>
+    <script src="script/JSDemo18.js"></script>
+</body>
+</html>

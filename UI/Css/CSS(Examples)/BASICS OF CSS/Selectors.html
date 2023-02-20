@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* this is called******** Element Selector ********any elemet like paragrah or heading or whatever it is we want to style them */ 
+        p{
+            color:tomato;
+        }
+
+        /* Now if I want to have only certain only first one or the third one...to be getting some color
+        so you can come back to the body section define class attribute  
+        now here we can say all the class which has p1 in it
+        change there font-size to 28px*/
+        /* agar class name ki help se style  karte hai to classname ke aage . lagana padta hai */
+        
+        /*This is called**********Class Selectors**************** */
+        .p1{
+            font-size: 28px;
+        }
+
+        /* In certain placeses we want unique paragraph or may be i have all this things written
+        inside a unique div  all this element are unique to this particular div */
+    /*if you want to say that this is unique so you can always specify ID
+    ID CANNOT BE REPEATED
+    CLASS CAN BE REPEATED  see we have same class in ist and 3rd paragraph */
+
+    /* So when i write id and want to write css for this particular id */
+    /* so always write # then value inside id inside this write css */
+       
+        /* This is called ***********Id Selector************************ */
+        #id1{
+            border: 3px solid #499998;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1">
+        <h1 style="font-family: 'Courier New', Courier, monospace;">Headings 1</h1>
+        <p class="p1">This is my para 1</p>
+        <p>This is my para 1</p>
+        <p class="p1">This is my para 1</p>
+        <p>This is my para 1</p>
+        <p>This is my para 1</p>
+    </div>
+</body>
+</html>

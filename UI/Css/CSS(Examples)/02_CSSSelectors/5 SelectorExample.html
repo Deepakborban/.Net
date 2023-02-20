@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* for one particular element we can have multiple classes like this */
+/* with  classes we can always merge them
+p.center se dono para center me aajaenge or unka color red hojaega 
+or humne 2nd para me large bhi diya to p.large ki property 2nd para pe apply hojaegi
+1st pe nahi hogi kyuki first me sirf center diya hai to sirf center ki property apply hogi */
+
+p.center {
+  text-align: center;
+  color: red;
+}
+
+p.large {
+  font-size: 300%;
+}
+ /* but can we do same thing with id */
+
+/* #id1{
+  color:orange;
+}
+#id2{
+  font-size:300%;
+} */
+
+
+</style>
+</head>
+<body>
+<h2>Class Selector Example</h2>
+<h1 class="center">This heading will not be affected</h1>
+<p class="center">This paragraph will be red and center-aligned.</p>
+<p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p> 
+<!-- you cant give multiple name to the id ,id should be unique
+thats a reasong we go with class because class support multiple -->
+<!-- <p id ="id1 id2">This is with id</p> -->    
+
+
+</body>
+</html>
+
+
+
+

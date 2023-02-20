@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="css/animation.css" rel="stylesheet"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#animate-fade').click(function () {
+                    $('.box').animate({ opacity : 'toggle' }, 'slow');
+                });
+
+                $('#animate-slide').click(function () {
+                    $('.box').slideToggle('slow');
+                });
+  	
+                $('#animate-both').click(function () {
+                    $('.box').animate({
+                        opacity: 'toggle',
+                        height: 'toggle'
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body id="single">
+        <h1>Sliding and fading elements in and out of view</h1>
+        <input type="button" id="animate-slide" value="slide" />
+        <input type="button" id="animate-fade" value="fade" />
+        <input type="button" id="animate-both" value="both" />
+        <div class="box">
+            <p>We want to reveal or toggle a block of content into view. This can be triggered by the
+user clicking some element or can be fired by some other event. </p>
+        </div>
+    </body>
+</html>

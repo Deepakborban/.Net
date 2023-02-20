@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        /* so here we are creating a frame and i am giving the name of frame as myfirst  */
+            @keyframes myfirst
+            {
+                /* so in this frame what is that i am going to do i am trying to change the background color from yellow to red
+                now any component which uses this frame myfirst they will get this animation */
+                from {background: yellow;}
+                /* while animating you can pass number of parameter here it is just changing the color goto your example 2 */
+                to {background: red;}
+            }
+
+            @-webkit-keyframes myfirst /*if you are using  Safari and Chrome so you have to write seprate code webkit it is used for crome and other browser , i am writing a custom css for different browsers*/
+            {/* crome browser will not understand keyframe it understands webkit and the code remain same */
+                from {background: yellow;}
+                to {background: red;}
+            }
+            /* so i am adding a div here  */
+            div
+            {
+                /* width and height to this div and the background */
+                width:100px;
+                height:100px;
+                background:red;
+                /* animation is something which is introduced in css3  so animation: what is the name of animation  FOR HOW MANY SEC IT HAS TO RUN */
+                animation:myfirst 10s;
+                /* this is for webkit whenever you use webkit so we write -webkit-animation and the parameter remain same */
+                -webkit-animation:myfirst 10s; /* Safari and Chrome */
+            }
+        </style>
+</head>
+<body>
+    <div>    
+    </div>
+</body>
+</html>

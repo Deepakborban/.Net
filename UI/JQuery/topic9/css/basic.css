@@ -1,0 +1,45 @@
+/* 
+    Document   : basic
+    Created on : May 3, 2013, 2:10:28 AM
+    Author     : Shashikanth
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* `Basic HTML
+----------------------------------------------------------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #fff;
+	color: #333;
+	font: 12px Arial, sans-serif;
+}
+
+/* Base padding. */
+#container {
+	padding: 20px;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+p {
+	clear: both;
+	margin: 0 0 20px;
+}
+
+img {
+	border: 0;
+	font-size: 0;
+}

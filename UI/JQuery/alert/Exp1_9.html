@@ -1,0 +1,30 @@
+<!--
+Author : Shasikanth R
+Email  : shashiknathcr@gmail.com
+Mobile : +91-8971472005
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example8 | To clone element a using jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+    </head>
+    <body>
+        <h1 align="center">HTML / jQuery </h1>
+        <hr/>
+        <ul>
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+            <li>Link 4</li>
+            <li>Link 5</li>
+        </ul>
+        <div id="cln"></div>
+        <script type="text/javascript">
+//            jQuery('ul').clone().appendTo('body');
+            
+            jQuery('ul').clone().appendTo('#cln');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html ,body{
+            margin: 0px;
+            padding:0px;
+        }
+        body{
+            background: url('../../image/img3.jpg') no-repeat center ;
+        }
+        .main{
+            width:90%;
+            border: 1px solid #333;
+            background: rgba(0,0,0,0.8);
+            /* margin auto so that it can come to the center */
+            margin: auto;
+            /* it should have a minimum height so that like if we add content it keeps growing
+            but as of now  i dont have any content thats a reason ill put a min height */
+            min-height: 500px;
+        } 
+        .img{
+            background: url("../../image/img2.jpg");
+            background-size:cover;
+            /* in this case we can get that in front using z-index */
+            /* zindex is use to get one container on the above  */
+            z-index:99;
+            height:250px;
+            width: 200px;
+            /* use to fit the image into the div */
+            background-size: cover ;
+        }
+    </style>
+</head> 
+<body>
+    <div class="main">
+        <div class="container">
+            <!-- this the one of the way to do it  -->
+            <img src= "../../image/img2.jpg" width="200 ">
+            <!-- or the alternate for this is we can create a particular div 
+            i'll call the class here as img -->
+            
+            
+            <!-- there is some case where my div will have an image and i want some text on it 
+            so i use this -->
+            <div class="img">This is my content above the IMAGE</div>
+        </div>
+        
+    </div>
+</body>
+</html>
