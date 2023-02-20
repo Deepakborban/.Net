@@ -1,0 +1,7 @@
+E:\Deepak\TRAINING\Backend\Code\Demos\OODemos\OODemos\OODemos\bin\Debug\OODemos.exe.config
+E:\Deepak\TRAINING\Backend\Code\Demos\OODemos\OODemos\OODemos\bin\Debug\OODemos.exe
+E:\Deepak\TRAINING\Backend\Code\Demos\OODemos\OODemos\OODemos\bin\Debug\OODemos.pdb
+E:\Deepak\TRAINING\Backend\Code\Demos\OODemos\OODemos\OODemos\obj\Debug\OODemos.csproj.AssemblyReference.cache
+E:\Deepak\TRAINING\Backend\Code\Demos\OODemos\OODemos\OODemos\obj\Debug\OODemos.csproj.CoreCompileInputs.cache
+E:\Deepak\TRAINING\Backend\Code\Demos\OODemos\OODemos\OODemos\obj\Debug\OODemos.exe
+E:\Deepak\TRAINING\Backend\Code\Demos\OODemos\OODemos\OODemos\obj\Debug\OODemos.pdb
