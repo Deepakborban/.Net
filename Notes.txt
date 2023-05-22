@@ -1,0 +1,78 @@
+Commands 
+npm install typescript -g          // to install typescript globally 
+tsc --init                         //this will create a tsconfig.json file, which was configuration file for typescript compiler 
+npm install lite-server -g         //to install lite-server globally
+lite-server                        //to run lite server     
+
+VarHosting : In var Hosting, any declaration will be moved to the very top of the function
+             If we have declared var multiple times also, So behind the scene java script is rewritten to have a single declaration of the variable ignoring any duplicate declarations 
+             So you can redclare var variable within the same scope or different
+             means suppose you have 1st initialesed a variable and at the middle or end of the code you have declared that as var variable then also  it works because of var hosting 
+
+
+Functional Scope of var Variable:
+var Declaration has Functional Scope means weather you are declaring it within if block or else or for loop, the valuse would be accessible within the function
+
+Now because of hosting and functional scope, var declaration seems to be bit tricky
+because of that ES2015 has introduced Let keyword
+
+------------------------------------------------------------------------------------------------
+
+Let Keyword : In ES2015 we got  Let keyword to declare variables 
+              they are not Hosted (so you cannot use that before declaration ) and they were block scoped 
+              to make let variable accessible within the function we can declare the let variable to the top of function
+              you  cannot ReDeclare Let keyword within the same scope however you can in different scope 
+
+
+So let was introduced to replace the var in long run 
+
+@@ Conclusion @@ var use karna hi ni hai let and const hi karna hai
+
+------------------------------------------------------------------------------------------------------
+
+IIFE - Immediately invoked function
+
+
+------------------------------------------------------------------------------------------------------
+Const VS Let
+
+Use Const over let 
+because most of the variable we us, usually require 1 time initialization and never really reassigned, 
+also by using the const keyword it helps us to identify variables which are getting reassigned  when that wan't really our intention 
+
+Use Let when reassigment is expected and use const when a new value assignment is not expected
+
+-----------------------------------------------------------------------------------------------------
+Arrow Funtion : it is the syntax addition to ES2015 to write a function
+                Provide short and consize syntax for writing function and they also simplyfy the behavior of this keyword in javascript
+
+                - reduce the amount of code that we write 
+                - solve the problem that is caused by this    
+-----------------------------------------------------------------------------------------------------
+this keyword
+
+
+-----------------------------------------------------------------------------------------------------
+Default function parameter
+
+Now in ES5 or java Script when a parameter is not specified for a function during its call then the value will be undefined 
+But now in ES2015 we can set default values for parameters in paranthesis using assignment operator 
+if you call this function with a value  it will log the value if you don't call it with a value it will pass the default value
+let getValue = function(value = 10){  
+    console.log(value); 
+} 
+
+We can have a functions with 2 or more parameters
+if you don't want to pass the parameter on right hand side simply ignore it 
+if you don't want to pass parameter on left hand side pass undefined 
+you can take a value that is specified already i.e value on the left hand side you can use this parameter to specify a default parameter that occurs on the right hand side 
+but you cannot assign bonus to value because there is no look ahead so value does not know what the value of bonus is 
+
+we can also pass variables as assignments to our parameters
+we can also pass function to this default 
+
+
+arguments object : it only takes in the parameters passed and ignore the default values 
+
+---------------------------------------------------------------------------------------------------------
+Rest Operator
